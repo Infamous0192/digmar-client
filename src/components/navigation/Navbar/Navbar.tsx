@@ -13,8 +13,8 @@ const user = {
   imageUrl: 'https://dummyimage.com/100/dfdfdf/dfdfdf',
 }
 const navigation = [
-  { name: 'Beranda', href: '#', current: true },
-  { name: 'Kelas', href: '#', current: false },
+  { name: 'Beranda', href: '/', current: true },
+  { name: 'Kelas', href: '/kelas', current: false },
   { name: 'Event', href: '#', current: false },
   { name: 'Bootcamp', href: '#', current: false },
 ]

@@ -37,7 +37,7 @@ const Courses: React.FC = () => {
 
           <CourseList />
           <div className="mt-12 flex items-center justify-end">
-            <Link to="#">
+            <Link to="">
               <Button>Lihat semua</Button>
             </Link>
           </div>

@@ -7,6 +7,7 @@ import { LandingLayout } from 'components/layouts'
 import Home from 'pages/Home'
 import Login from 'pages/Login'
 import { AuthProvider } from 'components/providers'
+import Course from 'pages/Course'
 
 const App: React.FC = () => {
   const location = useLocation()
@@ -32,6 +33,7 @@ const App: React.FC = () => {
         <Route path="/masuk" element={<Login />} />
         <Route path="/" element={<LandingLayout />}>
           <Route index element={<Home />} />
+          <Route path="/kelas" element={<Course />} />
         </Route>
       </Routes>
     </AuthProvider>
