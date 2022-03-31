@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
-import 'styles/globals.scss'
-
 import AOS from 'aos'
 import { LandingLayout } from 'components/layouts'
 
 import Home from 'pages/Home'
+import Masuk from 'pages/Masuk'
+import { AuthProvider } from 'components/providers'
 
 const App: React.FC = () => {
   const location = useLocation()
@@ -27,13 +27,14 @@ const App: React.FC = () => {
   }, [location.pathname])
 
   return (
-    <>
+    <AuthProvider>
       <Routes>
+        <Route path="/masuk" element={<Masuk />} />
         <Route path="/" element={<LandingLayout />}>
           <Route index element={<Home />} />
         </Route>
       </Routes>
-    </>
+    </AuthProvider>
   )
 }
 
