@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CourseButton from './CourseButton'
 import CourseItem from './CourseItem'
+import CourseSkeleton from './CourseSkeleton'
 
 const CourseList: React.FC = () => {
   const [category, setCategory] = useState('pemasaran')
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
+  }, [category])
 
   return (
     <>
@@ -24,9 +33,19 @@ const CourseList: React.FC = () => {
       </div>
 
       <div className="grid md:grid-cols-3 gap-x-4 gap-y-6">
-        <CourseItem />
-        <CourseItem />
-        <CourseItem />
+        {loading ? (
+          <>
+            <CourseSkeleton />
+            <CourseSkeleton />
+            <CourseSkeleton />
+          </>
+        ) : (
+          <>
+            <CourseItem />
+            <CourseItem />
+            <CourseItem />
+          </>
+        )}
       </div>
     </>
   )

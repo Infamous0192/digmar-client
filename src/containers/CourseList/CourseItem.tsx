@@ -6,13 +6,15 @@ import { StarIcon } from '@heroicons/react/solid'
 const CourseItem: React.FC = () => {
   return (
     <div className="w-4/5 md:w-full mx-auto bg-white rounded shadow-lg">
-      <div className="relative bg-gray-300 animate-pulse h-0 pb-[56.25%] rounded rounded-b-none overflow-hidden">
-        {/* <img
+      <Link to="#">
+        <div className="relative bg-gray-300 animate-pulse h-0 pb-[56.25%] rounded rounded-b-none overflow-hidden">
+          {/* <img
           src="https://via.placeholder.com/150"
           alt="placeholder"
           className="absolute w-full h-full inset-0 object-center object-cover"
         /> */}
-      </div>
+        </div>
+      </Link>
       <div className="px-4 py-6 space-y-2">
         <Link to="/">
           <h3 className="font-bold text-lg hover:underline">Full-Stack Javascript Developer</h3>

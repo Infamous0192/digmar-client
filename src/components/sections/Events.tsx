@@ -13,7 +13,7 @@ const Events: React.FC = () => {
                 {/* <img src="https://via.placeholder.com/300" alt="" width={150} height={150} /> */}
               </div>
               <div className="">
-                <h3 className="font-bold text-lg mb-2">Pelatihan Marketing</h3>
+                <h3 className="font-bold text-lg mb-2">Digital Marketing</h3>
                 <p className="text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto amet
                   repellendus recusandae porro iusto perferendis.
