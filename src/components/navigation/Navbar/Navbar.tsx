@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useAuth } from 'hooks'
 import { Button } from 'components/elements'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import logo from 'assets/logo.svg'
 
@@ -58,14 +58,14 @@ const Navbar: React.FC = () => {
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
-                      <Link
+                      <NavLink
                         key={item.name}
                         to={item.href}
                         className="font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm"
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </Link>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <Link
+                                  <NavLink
                                     to={item.href}
                                     className={classNames(
                                       active ? 'bg-gray-100' : '',
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                                     )}
                                   >
                                     {item.name}
-                                  </Link>
+                                  </NavLink>
                                 )}
                               </Menu.Item>
                             ))}

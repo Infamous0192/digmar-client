@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Courses: React.FC = () => {
   return (
-    <section className="relative">
+    <section className="relative bg-white">
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -mb-32"
         aria-hidden="true"
@@ -37,7 +37,7 @@ const Courses: React.FC = () => {
 
           <CourseList />
           <div className="mt-12 flex items-center justify-end">
-            <Link to="">
+            <Link to="/kelas">
               <Button>Lihat semua</Button>
             </Link>
           </div>
