@@ -1,4 +1,6 @@
+import { Button } from 'components/elements'
 import { CourseList } from 'containers/CourseList'
+import { Link } from 'react-router-dom'
 
 const Courses: React.FC = () => {
   return (
@@ -34,6 +36,11 @@ const Courses: React.FC = () => {
           </div>
 
           <CourseList />
+          <div className="mt-12 flex items-center justify-end">
+            <Link to="#">
+              <Button>Lihat semua</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
