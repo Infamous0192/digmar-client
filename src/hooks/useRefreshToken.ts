@@ -8,7 +8,7 @@ const useRefreshToken = () => {
     const res = await axios.get('/auth/refresh')
     const { data } = res.data
 
-    dispatch({ type: 'LOGIN', payload: { ...state, token: data.token } })
+    dispatch({ type: 'LOGIN', payload: { creds: state.creds!, token: data.token } })
 
     return data.token
   }
