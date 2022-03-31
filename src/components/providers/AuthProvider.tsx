@@ -5,11 +5,11 @@ import { AuthAction, AuthContext, AuthState, initialState } from 'contexts/auth'
 const authReducer = (state: AuthState, action: AuthAction): AuthState => {
   switch (action.type) {
     case 'LOGIN':
-      const { creds, token } = action.payload!
+      const { token } = action.payload!
 
       sessionStorage.setItem('token', token!)
 
-      return { ...state, creds, token, isLoaded: true, isAuthenticated: true }
+      return { ...state, ...action.payload, isLoaded: true, isAuthenticated: true }
     case 'LOGOUT':
       sessionStorage.removeItem('token')
       return { ...initialState, isLoaded: true, isAuthenticated: false }
@@ -22,22 +22,25 @@ export const AuthProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState)
 
   useEffect(() => {
-    const refresh = async (token: string) => {
-      try {
-        const res = await axios.get('/auth/verify', {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-        const { data } = res.data
-        dispatch({ type: 'LOGIN', payload: { token, creds: data.creds } })
-      } catch (error) {
-        dispatch({ type: 'LOGOUT' })
-      }
-    }
-    const token = sessionStorage.getItem('token')
+    dispatch({ type: 'LOGOUT' })
+    // const refresh = async (token: string) => {
+    //   try {
+    //     const res = await axios.get('/auth/verify', {
+    //       headers: { Authorization: `Bearer ${token}` },
+    //     })
+    //     const { data } = res.data
+    //     dispatch({ type: 'LOGIN', payload: { token, creds: data.creds } })
+    //   } catch (error) {
+    //     dispatch({ type: 'LOGOUT' })
+    //   }
+    // }
+    // const token = sessionStorage.getItem('token')
 
-    if (token) refresh(token!)
-    else dispatch({ type: 'LOGOUT' })
+    // if (token) refresh(token!)
+    // else dispatch({ type: 'LOGOUT' })
   }, [])
+
+  if (!state.isLoaded) return null
 
   return <AuthContext.Provider value={{ state, dispatch }}>{children}</AuthContext.Provider>
 }

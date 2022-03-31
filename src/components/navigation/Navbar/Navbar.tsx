@@ -1,11 +1,14 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useAuth } from 'hooks'
+import { Button } from 'components/elements'
+import { Link } from 'react-router-dom'
 
 const user = {
   name: 'Dwa Meizadewa',
   email: 'infamous0192@gmail.com',
-  imageUrl: 'https://via.placeholder.com/300',
+  imageUrl: 'https://dummyimage.com/100/dfdfdf/dfdfdf',
 }
 const navigation = [
   { name: 'Beranda', href: '#', current: true },
@@ -24,6 +27,7 @@ function classNames(...classes: string[]) {
 }
 const Navbar: React.FC = () => {
   const [top, setTop] = useState(true)
+  const { state } = useAuth()
 
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
@@ -38,7 +42,7 @@ const Navbar: React.FC = () => {
     <Disclosure
       as="nav"
       className={`fixed w-full z-30 transition duration-300 ease-in-out ${
-        !top ? 'bg-white shadow-lg' : 'bg-white md:bg-transparent'
+        !top ? 'bg-white shadow-lg' : 'bg-white md:bg-transparent shadow-lg md:shadow-none'
       }`}
     >
       {({ open }) => (
@@ -59,7 +63,7 @@ const Navbar: React.FC = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="font-medium text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm"
+                        className="font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm"
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -70,50 +74,66 @@ const Navbar: React.FC = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
-                  <button
-                    type="button"
-                    className="p-1 rounded-full text-gray-500 hover:text-gray-700"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-
-                  {/* Profile dropdown */}
-                  <Menu as="div" className="ml-3 relative">
-                    <div>
-                      <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm">
-                        <span className="sr-only">Open user menu</span>
-                        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
-                      </Menu.Button>
-                    </div>
-                    <Transition
-                      as={Fragment}
-                      enter="transition ease-out duration-100"
-                      enterFrom="transform opacity-0 scale-95"
-                      enterTo="transform opacity-100 scale-100"
-                      leave="transition ease-in duration-75"
-                      leaveFrom="transform opacity-100 scale-100"
-                      leaveTo="transform opacity-0 scale-95"
-                    >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        {userNavigation.map((item) => (
-                          <Menu.Item key={item.name}>
-                            {({ active }) => (
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-900'
+                  {state.isAuthenticated ? (
+                    <>
+                      <button
+                        type="button"
+                        className="p-1 rounded-full text-gray-500 hover:text-gray-700"
+                      >
+                        <span className="sr-only">View notifications</span>
+                        <BellIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
+                      <Menu as="div" className="ml-3 relative">
+                        <div>
+                          <Menu.Button className="max-w-xs rounded-full flex items-center text-sm">
+                            <span className="sr-only">Open user menu</span>
+                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                          </Menu.Button>
+                        </div>
+                        <Transition
+                          as={Fragment}
+                          enter="transition ease-out duration-100"
+                          enterFrom="transform opacity-0 scale-95"
+                          enterTo="transform opacity-100 scale-100"
+                          leave="transition ease-in duration-75"
+                          leaveFrom="transform opacity-100 scale-100"
+                          leaveTo="transform opacity-0 scale-95"
+                        >
+                          <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            {userNavigation.map((item) => (
+                              <Menu.Item key={item.name}>
+                                {({ active }) => (
+                                  <a
+                                    href={item.href}
+                                    className={classNames(
+                                      active ? 'bg-gray-100' : '',
+                                      'block px-4 py-2 text-sm text-gray-900'
+                                    )}
+                                  >
+                                    {item.name}
+                                  </a>
                                 )}
-                              >
-                                {item.name}
-                              </a>
-                            )}
-                          </Menu.Item>
-                        ))}
-                      </Menu.Items>
-                    </Transition>
-                  </Menu>
+                              </Menu.Item>
+                            ))}
+                          </Menu.Items>
+                        </Transition>
+                      </Menu>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        to="/masuk"
+                        className="whitespace-nowrap text-base font-medium text-gray-600 hover:text-gray-900"
+                      >
+                        Masuk
+                      </Link>
+                      <Link to="/daftar">
+                        <Button color="secondary" size="sm" className="ml-8">
+                          Daftar
+                        </Button>
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
               <div className="-mr-2 flex md:hidden">
@@ -154,34 +174,52 @@ const Navbar: React.FC = () => {
                 ))}
               </div>
               <div className="pt-4 pb-3 border-t border-gray-300">
-                <div className="flex items-center px-5">
-                  <div className="flex-shrink-0">
-                    <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                {!state.isAuthenticated ? (
+                  <div className="px-5">
+                    <Link to="/daftar">
+                      <Button size="sm" color="secondary" className="w-full">
+                        Daftar
+                      </Button>
+                    </Link>
+                    <p className="mt-4 text-center text-sm text-gray-500">
+                      Sudah terdaftar?{' '}
+                      <Link to="/masuk" className="text-blue-600 hover:text-blue-500">
+                        Masuk
+                      </Link>
+                    </p>
                   </div>
-                  <div className="ml-3">
-                    <div className="font-medium text-gray-900">{user.name}</div>
-                    <div className="text-sm text-gray-600">{user.email}</div>
-                  </div>
-                  <button
-                    type="button"
-                    className="ml-auto flex-shrink-0 p-1 rounded-full text-gray-600 hover:text-gray-900"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-                <div className="mt-3 px-2 space-y-1">
-                  {userNavigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
-                    >
-                      {item.name}
-                    </Disclosure.Button>
-                  ))}
-                </div>
+                ) : (
+                  <>
+                    <div className="flex items-center px-5">
+                      <div className="flex-shrink-0">
+                        <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      </div>
+                      <div className="ml-3">
+                        <div className="font-medium text-gray-900">{state.creds?.name}</div>
+                        <div className="text-sm text-gray-600">{state.creds?.email}</div>
+                      </div>
+                      <button
+                        type="button"
+                        className="ml-auto flex-shrink-0 p-1 rounded-full text-gray-600 hover:text-gray-900"
+                      >
+                        <span className="sr-only">View notifications</span>
+                        <BellIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <div className="mt-3 px-2 space-y-1">
+                      {userNavigation.map((item) => (
+                        <Disclosure.Button
+                          key={item.name}
+                          as="a"
+                          href={item.href}
+                          className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                        >
+                          {item.name}
+                        </Disclosure.Button>
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </Disclosure.Panel>
           </Transition>

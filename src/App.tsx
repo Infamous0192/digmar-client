@@ -5,7 +5,7 @@ import AOS from 'aos'
 import { LandingLayout } from 'components/layouts'
 
 import Home from 'pages/Home'
-import Masuk from 'pages/Masuk'
+import Login from 'pages/Login'
 import { AuthProvider } from 'components/providers'
 
 const App: React.FC = () => {
@@ -29,7 +29,7 @@ const App: React.FC = () => {
   return (
     <AuthProvider>
       <Routes>
-        <Route path="/masuk" element={<Masuk />} />
+        <Route path="/masuk" element={<Login />} />
         <Route path="/" element={<LandingLayout />}>
           <Route index element={<Home />} />
         </Route>
