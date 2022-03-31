@@ -55,14 +55,14 @@ const Footer: React.FC = () => {
 
           {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-gray-800 font-medium mb-2">Products</h6>
+            <h6 className="text-gray-800 font-medium mb-2">Kelas</h6>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Web Studio
+                  Pemasaran
                 </Link>
               </li>
               <li className="mb-2">
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  DynamicBox Flex
+                  Operasional
                 </Link>
               </li>
               <li className="mb-2">
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Programming Forms
+                  Sumber Daya Manusia
                 </Link>
               </li>
               <li className="mb-2">
@@ -86,15 +86,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Integrations
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Command-line
+                  Keuangan
                 </Link>
               </li>
             </ul>
@@ -102,14 +94,14 @@ const Footer: React.FC = () => {
 
           {/* 3rd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="text-gray-800 font-medium mb-2">Resources</h6>
+            <h6 className="text-gray-800 font-medium mb-2">Kelas</h6>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Documentation
+                  Pemasaran
                 </Link>
               </li>
               <li className="mb-2">
@@ -117,7 +109,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Tutorials & Guides
+                  Operasional
                 </Link>
               </li>
               <li className="mb-2">
@@ -125,7 +117,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Blog
+                  Sumber Daya Manusia
                 </Link>
               </li>
               <li className="mb-2">
@@ -133,15 +125,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
-                  Support Center
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Partners
+                  Keuangan
                 </Link>
               </li>
             </ul>
@@ -165,22 +149,6 @@ const Footer: React.FC = () => {
                   className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
                 >
                   About us
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Company values
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link
-                  to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
-                >
-                  Pricing
                 </Link>
               </li>
               <li className="mb-2">
@@ -294,11 +262,10 @@ const Footer: React.FC = () => {
             </li>
           </ul>
 
-          {/* Copyrights note */}
           <div className="text-sm text-gray-600 mr-4">
-            Made by{' '}
-            <a className="text-blue-600 hover:underline" href="https://cruip.com/">
-              Cruip
+            Build by{' '}
+            <a className="text-blue-600 hover:underline" href="https://t-paz.com/">
+              Tarkiz Paz Banua
             </a>
             . All rights reserved.
           </div>
