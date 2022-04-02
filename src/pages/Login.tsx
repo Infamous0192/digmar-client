@@ -38,7 +38,7 @@ const Login: React.FC = () => {
         <div className="border-t border-gray-200 mt-4">
           <div className="py-4 text-gray-700 text-sm">
             Belum punya akun?{' '}
-            <a href="#" className="text-blue-600 hover:text-blue-500">
+            <a href="#" className="text-sunglow-600 hover:text-sunglow-500">
               Daftar
             </a>
           </div>

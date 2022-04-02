@@ -3,7 +3,7 @@
 }
 
 .primary {
-  @apply text-white bg-blue-600 hover:bg-blue-700;
+  @apply text-white bg-sunglow-600 hover:bg-sunglow-500;
 }
 
 .secondary {

@@ -62,7 +62,7 @@ const Newsletter: React.FC = () => {
                       placeholder="Your email…"
                       aria-label="Your email…"
                     />
-                    <a className="btn text-white bg-blue-600 hover:bg-blue-700 shadow" href="#0">
+                    <a className="btn text-white bg-sunglow-600 hover:bg-sunglow-500 shadow" href="#0">
                       Subscribe
                     </a>
                   </div>

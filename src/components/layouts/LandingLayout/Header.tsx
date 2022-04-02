@@ -146,7 +146,7 @@ const Header: React.FC = () => {
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <item.icon
-                                className="flex-shrink-0 h-6 w-6 text-blue-600"
+                                className="flex-shrink-0 h-6 w-6 text-sunglow-600"
                                 aria-hidden="true"
                               />
                               <div className="ml-4">

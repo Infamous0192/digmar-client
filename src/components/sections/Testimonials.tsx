@@ -122,7 +122,7 @@ const Testimonials: React.FC = () => {
                 <cite className="block font-bold text-lg not-italic mb-1">Dwa Meizadewa</cite>
                 <div className="text-gray-600">
                   <span>CEO & Co-Founder</span>{' '}
-                  <a className="text-blue-600 hover:underline" href="#0">
+                  <a className="text-sunglow-600 hover:underline" href="#0">
                     @Pesbuk
                   </a>
                 </div>

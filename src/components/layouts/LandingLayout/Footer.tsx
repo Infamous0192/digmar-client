@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from 'assets/logo.svg'
+import logo from 'assets/logo.png'
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <div className="mb-2">
               {/* Logo */}
               <Link to="/" className="inline-block" aria-label="Cruip">
-                <img src={logo} className="w-10 h-10" alt="logo tarkiz" />
+                <img src={logo} className="h-8" alt="logo siap cuan" />
               </Link>
             </div>
             <div className="text-sm text-gray-600">
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                         aria-hidden="true"
                       ></span>
                       <svg
-                        className="w-3 h-3 fill-current text-blue-600 mx-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-sunglow-600 mx-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -243,7 +243,7 @@ const Footer: React.FC = () => {
 
           <div className="text-sm text-gray-600 mr-4">
             Build by{' '}
-            <a className="text-blue-600 hover:underline" href="https://t-paz.com/">
+            <a className="text-sunglow-600 hover:underline" href="https://t-paz.com/">
               Tarkiz Paz Banua
             </a>
             . All rights reserved.

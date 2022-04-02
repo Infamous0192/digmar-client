@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <Courses />
       <Events />
       <Testimonials />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   )
 }

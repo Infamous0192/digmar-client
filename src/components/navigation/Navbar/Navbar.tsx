@@ -5,7 +5,7 @@ import { useAuth } from 'hooks'
 import { Button } from 'components/elements'
 import { Link, NavLink } from 'react-router-dom'
 
-import logo from 'assets/logo.svg'
+import logo from 'assets/logo.png'
 
 const user = {
   name: 'Dwa Meizadewa',
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0 -pr-4">
-                  <img className="h-10 w-10" src={logo} alt="Workflow" />
+                  <img className="h-8" src={logo} alt="Logo Siap Cuan" />
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
@@ -181,7 +181,7 @@ const Navbar: React.FC = () => {
                     </Link>
                     <p className="mt-4 text-center text-sm text-gray-500">
                       Sudah terdaftar?{' '}
-                      <Link to="/masuk" className="text-blue-600 hover:text-blue-500">
+                      <Link to="/masuk" className="text-sunglow-600 hover:text-sunglow-500">
                         Masuk
                       </Link>
                     </p>

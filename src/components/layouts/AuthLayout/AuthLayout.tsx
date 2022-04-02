@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from 'hooks'
 
-import logo from 'assets/logo.svg'
+import logo from 'assets/logo.png'
 
 const AuthLayout: React.FC = ({ children }) => {
   const { state } = useAuth()
@@ -16,9 +16,9 @@ const AuthLayout: React.FC = ({ children }) => {
 
   return (
     <div className="w-full h-screen lg:grid grid-cols-2">
-      <div className="fixed top-[12px] left-4">
+      <div className="fixed top-[16px] left-4">
         <Link to="/">
-          <img src={logo} className="w-10 h-10" alt="Logo Tarkiz Paz Banua" />
+          <img src={logo} className="h-8" alt="Logo Siap Cuan" />
         </Link>
       </div>
       <div className="bg-white h-screen w-full flex items-center justify-center">{children}</div>

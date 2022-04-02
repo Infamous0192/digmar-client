@@ -32,7 +32,7 @@ const CourseDataList: React.FC = () => {
                 id="pemasaran"
                 name="pemasaran"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="pemasaran" className="ml-2 block text-sm text-gray-700">
                 Pemasaran
@@ -43,7 +43,7 @@ const CourseDataList: React.FC = () => {
                 id="operasional"
                 name="operasional"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="operasional" className="ml-2 block text-sm text-gray-700">
                 Operasional
@@ -54,7 +54,7 @@ const CourseDataList: React.FC = () => {
                 id="sdm"
                 name="sdm"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="sdm" className="ml-2 block text-sm text-gray-700">
                 Sumber Daya Manusia
@@ -65,7 +65,7 @@ const CourseDataList: React.FC = () => {
                 id="keuangan"
                 name="keuangan"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="keuangan" className="ml-2 block text-sm text-gray-700">
                 Keuangan
@@ -79,7 +79,7 @@ const CourseDataList: React.FC = () => {
                 id="dasar"
                 name="dasar"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="dasar" className="ml-2 block text-sm text-gray-700">
                 Dasar
@@ -90,7 +90,7 @@ const CourseDataList: React.FC = () => {
                 id="pemula"
                 name="pemula"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="pemula" className="ml-2 block text-sm text-gray-700">
                 Pemula
@@ -101,7 +101,7 @@ const CourseDataList: React.FC = () => {
                 id="menengah"
                 name="menengah"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="menengah" className="ml-2 block text-sm text-gray-700">
                 Menengah
@@ -112,7 +112,7 @@ const CourseDataList: React.FC = () => {
                 id="mahir"
                 name="mahir"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="mahir" className="ml-2 block text-sm text-gray-700">
                 Mahir
@@ -123,7 +123,7 @@ const CourseDataList: React.FC = () => {
                 id="professional"
                 name="professional"
                 type="checkbox"
-                className="h-4 w-4 text-blue-600 focus:ring-0 border-gray-300 rounded"
+                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
               />
               <label htmlFor="professional" className="ml-2 block text-sm text-gray-700">
                 Professional
@@ -141,7 +141,7 @@ const CourseDataList: React.FC = () => {
             type="text"
             onChange={(e) => setKeyword(e.target.value)}
             placeholder="Cari kelas"
-            className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 pr-12 sm:text-sm border-gray-300 rounded-lg"
+            className="focus:ring-sunglow-500 focus:border-sunglow-500 block w-full pl-10 pr-12 sm:text-sm border-gray-300 rounded-lg"
           />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
