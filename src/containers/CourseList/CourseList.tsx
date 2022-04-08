@@ -32,7 +32,7 @@ const CourseList: React.FC = () => {
         </CourseButton>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 px-12 md:px-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
         {loading ? (
           <>
             <CourseSkeleton />

@@ -1,4 +1,4 @@
-import { Courses, Features, Hero, Newsletter, Testimonials } from 'components/sections'
+import { BestChoices, Courses, Features, Hero, Newsletter, Testimonials } from 'components/sections'
 import Events from 'components/sections/Events'
 
 const Home: React.FC = () => {
@@ -6,6 +6,7 @@ const Home: React.FC = () => {
     <main className="flex-grow">
       <Hero />
       <Features />
+      <BestChoices />
       <Courses />
       <Events />
       <Testimonials />

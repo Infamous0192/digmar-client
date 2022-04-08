@@ -2,7 +2,7 @@ import { Button } from 'components/elements'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative">
+    <section className="relative bg-gray-50">
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none"
         aria-hidden="true"
@@ -22,18 +22,18 @@ const Hero: React.FC = () => {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero content */}
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-32 pb-12 md:pt-48 md:pb-32">
           {/* Section header */}
-          <div className="text-center pb-12 md:pb-16">
+          <div className="text-left pb-12 md:pb-16">
             <h1
               className="text-4xl md:text-5xl font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
               Lorem, ipsum dolor.
             </h1>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-xl">
               <p
                 className="text-lg md:text-xl text-gray-600 mb-8"
                 data-aos="zoom-y-out"
@@ -41,19 +41,10 @@ const Hero: React.FC = () => {
               >
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, praesentium.
               </p>
-              <div
-                className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center"
-                data-aos="zoom-y-out"
-                data-aos-delay="300"
-              >
+              <div className="" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
                   <Button color="primary" size="md" className="w-full mb-4 sm:w-auto sm:mb-0">
                     Mulai Sekarang
-                  </Button>
-                </div>
-                <div>
-                  <Button color="secondary" size="md" className="w-full sm:w-auto sm:ml-4">
-                    Lebih Lanjut
                   </Button>
                 </div>
               </div>

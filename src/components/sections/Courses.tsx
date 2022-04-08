@@ -24,7 +24,7 @@ const Courses: React.FC = () => {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-8 md:pb-12">
@@ -36,7 +36,7 @@ const Courses: React.FC = () => {
           </div>
 
           <CourseList />
-          <div className="mt-12 flex items-center justify-end">
+          <div className="mt-8 md:mt-12 flex items-center justify-end">
             <Link to="/kelas">
               <Button>Lihat semua</Button>
             </Link>

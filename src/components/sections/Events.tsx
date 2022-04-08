@@ -1,7 +1,7 @@
 const Events: React.FC = () => {
   return (
     <section className="relative bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <div className="max-w-sm">
             <h2 className="font-bold text-2xl">Upcoming Events</h2>

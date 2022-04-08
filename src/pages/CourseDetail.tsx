@@ -4,13 +4,12 @@ import { Button } from 'components/elements'
 
 const CourseDetail: React.FC = () => {
   return (
-    <main className="flex-grow">
+    <main className="flex-grow py-24">
       <div className="max-w-7xl pb-12 md:pb-20 pt-12 mx-auto px-4 sm:px-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-2">Full-stack Javascript Developer</h1>
-          <p>Lorem ipsum dolor sit amet.</p>
         </div>
-        <div className="grid md:grid-cols-12 gap-8 mt-8">
+        <div className="grid md:grid-cols-12 gap-8 mt-8 relative">
           <div className="md:col-span-8">
             <div className="relative h-0 pb-[56.25%] mb-8">
               <div className="absolute w-full h-full bg-gray-200 rounded overflow-hidden">
@@ -24,8 +23,8 @@ const CourseDetail: React.FC = () => {
                 ></iframe>
               </div>
             </div>
-            <div className="w-full space-y-8 divide-y divide-gray-200">
-              <section>
+            <div className="w-full">
+              <section className="border-b border-gray-200 pb-4 mb-4">
                 <h2 className="text-2xl font-bold mb-2">Deskripsi</h2>
                 <p className="mb-2 leading-relaxed text-gray-700">
                   There is so much happening in the AI space. Advances in the economic sectors have
@@ -41,39 +40,10 @@ const CourseDetail: React.FC = () => {
                   new topics and revisit old ones.
                 </p>
               </section>
-              <section className="pt-4">
+              <section className="pb-4 mb-4">
                 <h2 className="text-2xl font-bold mb-2">Materi</h2>
-                <div className="rounded-lg shadow bg-white p-6 mb-4">
+                <div className="rounded-lg shadow-sm bg-white border border-gray-200 p-6 mb-4">
                   <div className="">
-                    <h3 className="text-lg font-semibold mb-3">Fundamental</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-center justify-between font-medium ">
-                        <div className="flex items-center">
-                          <LockClosedIcon className="w-5 h-5 text-gray-300" />
-                          <span className="leading-none ml-4">Introduction</span>
-                        </div>
-                        <div>3 mins</div>
-                      </li>
-                      <li className="flex items-center justify-between font-medium ">
-                        <div className="flex items-center">
-                          <LockClosedIcon className="w-5 h-5 text-gray-300" />
-                          <span className="leading-none ml-4">Tools & Requirement</span>
-                        </div>
-                        <div>3 mins</div>
-                      </li>
-                      <li className="flex items-center justify-between font-medium ">
-                        <div className="flex items-center">
-                          <LockClosedIcon className="w-5 h-5 text-gray-300" />
-                          <span className="leading-none ml-4">Environment Setup</span>
-                        </div>
-                        <div>3 mins</div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="rounded-lg shadow bg-white p-6 mb-4">
-                  <div className="">
-                    <h3 className="text-lg font-semibold mb-3">Implementation</h3>
                     <ul className="space-y-2">
                       <li className="flex items-center justify-between font-medium ">
                         <div className="flex items-center">
@@ -103,7 +73,7 @@ const CourseDetail: React.FC = () => {
             </div>
           </div>
           <div className="md:col-span-4">
-            <div className="bg-white w-full rounded shadow-sm p-6 space-y-2">
+            <div className="bg-white border border-gray-200 w-full rounded shadow-sm p-6 space-y-2">
               <div className="space-x-1.5 flex items-center">
                 <ClockIcon className="w-5 h-5 inline" />
                 <span className="leading-none font-medium">5 Jam</span>
@@ -113,7 +83,7 @@ const CourseDetail: React.FC = () => {
                 <span className="leading-none font-medium">2,000 Pendaftar</span>
               </div>
             </div>
-            <Button color="secondary" className="w-full mt-4">
+            <Button color="secondary" className="w-full mt-4 sticky top-0">
               Daftar sekarang
             </Button>
           </div>
