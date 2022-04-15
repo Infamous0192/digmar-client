@@ -4,23 +4,35 @@ import { Button } from 'components/elements'
 
 const CourseDetail: React.FC = () => {
   return (
-    <main className="flex-grow py-24">
+    <main className="flex-grow py-12">
       <div className="max-w-7xl pb-12 md:pb-20 pt-12 mx-auto px-4 sm:px-6">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-2">Full-stack Javascript Developer</h1>
-        </div>
         <div className="grid md:grid-cols-12 gap-8 mt-8 relative">
           <div className="md:col-span-8">
-            <div className="relative h-0 pb-[56.25%] mb-8">
-              <div className="absolute w-full h-full bg-gray-200 rounded overflow-hidden">
-                <iframe
-                  className="absoulute w-full h-full"
-                  src="https://www.youtube.com/embed/JS5w4rUbjQE"
-                  title="YouTube video player"
-                  frameBorder={0}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+            <div className="relative md:flex md:space-x-4 mb-8 bg-white p-4 border border-gray-200 rounded-md shadow">
+              <div className="w-full relative shrink-0 md:w-48 aspect-video md:aspect-square rounded-md overflow-hidden bg-gray-200">
+                <img
+                  src="https://d17ivq9b7rppb3.cloudfront.net/original/academy/memulai_pemrograman_dengan_kotlin_logo_230421132137.jpg"
+                  className="w-full h-full inset-0 object-cover object-center "
+                  alt=""
+                />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold mb-2">Full-stack Javascript Developer</h1>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur ea quo corporis
+                  saepe repellendus facilis adipisci, amet minima molestias debitis voluptatem
+                  pariatur deleniti alias eveniet.
+                </p>
+                <div className="flex items-center mt-4 space-x-4">
+                  <div className="space-x-1.5 flex items-center">
+                    <ClockIcon className="w-5 h-5 inline" />
+                    <span className="leading-none font-medium">5 Jam</span>
+                  </div>
+                  <div className="space-x-1.5 flex items-center">
+                    <UsersIcon className="w-5 h-5 inline" />
+                    <span className="leading-none font-medium">2,000 Pendaftar</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="w-full">

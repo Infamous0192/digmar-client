@@ -1,33 +1,69 @@
+import { AxiosError } from 'axios'
 import { Button } from 'components/elements'
 import { TextField } from 'components/forms'
 import { AuthLayout } from 'components/layouts'
-import { useAuth, useForm } from 'hooks'
+import { useForm } from 'hooks'
+import axios from 'lib/axios'
+import { useAuth } from 'modules/auth'
+import { Link, useLocation } from 'react-router-dom'
 
 const Login: React.FC = () => {
   const { dispatch } = useAuth()
-  const { values, handleChange, useSubmit } = useForm()
+  const { state }: any = useLocation()
+  const { values, handleChange, useSubmit, setErrors, errors } = useForm()
 
-  const handleSubmit = useSubmit(() => {
-    console.log(values)
+  const handleSubmit = useSubmit(async () => {
+    try {
+      const { data: token } = await axios.post('/login', values)
+      const res = await axios.get('/me', {
+        headers: {
+          Authorization: `bearer ${token}`,
+        },
+      })
 
-    dispatch({
-      type: 'LOGIN',
-      payload: {
-        creds: { _id: '123', name: 'Dwa Meizadewa', email: 'infamous0192@gmail.com' },
-        token: '237y5udhfv937tjrbgi434i5t',
-      },
-    })
+      dispatch({
+        type: 'LOGIN',
+        payload: {
+          creds: { ...res.data, email: 'infamous0192@gmail.com' },
+          token,
+        },
+      })
+    } catch (error: any) {
+      const { messages } = error.response.data
+      if (!messages.error) return setErrors(messages)
+
+      const field = messages.error == 'Wrong Password' ? 'password' : 'email'
+
+      setErrors({ ...errors, [field]: messages.error })
+    }
   })
 
   return (
     <AuthLayout>
-      <div className="max-w-sm w-full px-2">
-        <h1 className="font-bold text-2xl mb-4">Sign In</h1>
-        <form onSubmit={handleSubmit} className="space-y-1.5">
-          <TextField name="email" type="email" label="Alamat Email" onChange={handleChange} />
-          <TextField name="password" type="password" label="Password" onChange={handleChange} />
-          <div className="flex items-center justify-between py-1">
-            <a className="text-gray-600 underline text-sm" href="#">
+      <div className="max-w-xs sm:max-w-sm w-full px-4">
+        <h1 className="font-bold text-2xl mb-2">Sign In</h1>
+        {state && <div className="bg-green-100 text-green-600 py-2 px-3 rounded-md">{state.message}</div>}
+        <form onSubmit={handleSubmit} className="space-y-3 mt-2">
+          <div>
+            <TextField
+              name="email"
+              type="text"
+              label="Alamat Email"
+              error={errors['email']}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <TextField
+              name="password"
+              type="password"
+              label="Password"
+              error={errors['password']}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex items-center justify-between py-3">
+            <a className="text-gray-800 underline text-sm" href="#">
               Lupa password?
             </a>
             <Button size="sm" className="text-sm">
@@ -38,9 +74,9 @@ const Login: React.FC = () => {
         <div className="border-t border-gray-200 mt-4">
           <div className="py-4 text-gray-700 text-sm">
             Belum punya akun?{' '}
-            <a href="#" className="text-sunglow-600 hover:text-sunglow-500">
+            <Link to="/daftar" className="text-sunglow-600 hover:text-sunglow-500">
               Daftar
-            </a>
+            </Link>
           </div>
         </div>
       </div>

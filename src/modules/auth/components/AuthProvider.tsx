@@ -1,15 +1,15 @@
 import { useEffect, useReducer } from 'react'
 import axios from 'lib/axios'
-import { AuthAction, AuthContext, AuthState, initialState } from 'contexts/auth'
+import { AuthAction, AuthContext, AuthState, initialState } from '../contexts'
 
 const authReducer = (state: AuthState, action: AuthAction): AuthState => {
   switch (action.type) {
     case 'LOGIN':
-      const { token } = action.payload!
+      const { creds, token } = action.payload!
 
       sessionStorage.setItem('token', token!)
 
-      return { ...state, ...action.payload, isLoaded: true, isAuthenticated: true }
+      return { ...state, creds, token, isLoaded: true, isAuthenticated: true }
     case 'LOGOUT':
       sessionStorage.removeItem('token')
       return { ...initialState, isLoaded: true, isAuthenticated: false }
@@ -39,8 +39,6 @@ export const AuthProvider: React.FC = ({ children }) => {
     // if (token) refresh(token!)
     // else dispatch({ type: 'LOGOUT' })
   }, [])
-
-  if (!state.isLoaded) return null
 
   return <AuthContext.Provider value={{ state, dispatch }}>{children}</AuthContext.Provider>
 }

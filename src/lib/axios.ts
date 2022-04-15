@@ -1,7 +1,6 @@
 import AxiosInstance from 'axios'
 
-const isProduction = import.meta.env.MODE == 'production'
-const baseURL = isProduction ? '/api' : 'http://localhost:3001/api'
+const baseURL = 'https://manajemen.siapcuan.com/api'
 
 const axios = AxiosInstance.create({ baseURL })
 

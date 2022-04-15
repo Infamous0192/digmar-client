@@ -2,13 +2,15 @@ import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 import AOS from 'aos'
+import 'swiper/css'
 import { LandingLayout } from 'components/layouts'
 
 import Home from 'pages/Home'
 import Login from 'pages/Login'
-import { AuthProvider } from 'components/providers'
+import { AuthProvider } from 'modules/auth'
 import Course from 'pages/Course'
 import CourseDetail from 'pages/CourseDetail'
+import Daftar from 'pages/Daftar'
 
 const App: React.FC = () => {
   const location = useLocation()
@@ -31,6 +33,7 @@ const App: React.FC = () => {
   return (
     <AuthProvider>
       <Routes>
+        <Route path="/daftar" element={<Daftar />} />
         <Route path="/masuk" element={<Login />} />
         <Route path="/" element={<LandingLayout />}>
           <Route index element={<Home />} />

@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { useAuth } from 'hooks'
+import { useAuth } from 'modules/auth'
 import { Button } from 'components/elements'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 import logo from 'assets/logo.png'
 
@@ -29,7 +29,8 @@ function classNames(...classes: string[]) {
 }
 const Navbar: React.FC = () => {
   const [top, setTop] = useState(true)
-  const { state } = useAuth()
+  const { state, dispatch } = useAuth()
+  const navigate = useNavigate()
 
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
@@ -39,6 +40,11 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', scrollHandler)
     return () => window.removeEventListener('scroll', scrollHandler)
   }, [top])
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' })
+    navigate('/')
+  }
 
   return (
     <Disclosure
@@ -98,21 +104,42 @@ const Navbar: React.FC = () => {
                           leaveTo="transform opacity-0 scale-95"
                         >
                           <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {userNavigation.map((item) => (
-                              <Menu.Item key={item.name}>
-                                {({ active }) => (
-                                  <NavLink
-                                    to={item.href}
-                                    className={classNames(
-                                      active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-900'
-                                    )}
-                                  >
-                                    {item.name}
-                                  </NavLink>
-                                )}
-                              </Menu.Item>
-                            ))}
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/profile"
+                                  className={`${
+                                    active && 'bg-gray-100'
+                                  } block px-4 py-2 text-sm text-gray-900`}
+                                >
+                                  Your Profile
+                                </NavLink>
+                              )}
+                            </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <NavLink
+                                  to="/profile"
+                                  className={`${
+                                    active && 'bg-gray-100'
+                                  } block px-4 py-2 text-sm text-gray-900`}
+                                >
+                                  Settings
+                                </NavLink>
+                              )}
+                            </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <button
+                                  onClick={handleLogout}
+                                  className={`${
+                                    active && 'bg-gray-100'
+                                  } block px-4 py-2 text-sm w-full text-left text-gray-900`}
+                                >
+                                  Sign Out
+                                </button>
+                              )}
+                            </Menu.Item>
                           </Menu.Items>
                         </Transition>
                       </Menu>
@@ -193,7 +220,7 @@ const Navbar: React.FC = () => {
                         <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                       </div>
                       <div className="ml-3">
-                        <div className="font-medium text-gray-900">{state.creds?.name}</div>
+                        <div className="font-medium text-gray-900">{state.creds?.username}</div>
                         <div className="text-sm text-gray-600">{state.creds?.email}</div>
                       </div>
                       <button
@@ -205,16 +232,26 @@ const Navbar: React.FC = () => {
                       </button>
                     </div>
                     <div className="mt-3 px-2 space-y-1">
-                      {userNavigation.map((item) => (
-                        <Disclosure.Button
-                          key={item.name}
-                          as="a"
-                          href={item.href}
-                          className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
-                        >
-                          {item.name}
-                        </Disclosure.Button>
-                      ))}
+                      <Disclosure.Button
+                        as={Link}
+                        to="/profile"
+                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                      >
+                        Your Profile
+                      </Disclosure.Button>
+                      <Disclosure.Button
+                        as={Link}
+                        to="/profile"
+                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                      >
+                        Settings
+                      </Disclosure.Button>
+                      <button
+                        onClick={handleLogout}
+                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 w-full text-left rounded block px-3 py-2"
+                      >
+                        Sign Out
+                      </button>
                     </div>
                   </>
                 )}

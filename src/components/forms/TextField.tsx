@@ -16,7 +16,7 @@ export const TextField: React.FC<Props> = (props) => {
           props.error ? 'border-red-500' : 'border-gray-300'
         } rounded`}
       />
-      <p className="text-red-500 text-xs h-1">{props.error || ''}</p>
+      <p className="text-red-500 text-xs m-0 p-0 h-1">{props.error || ''}</p>
     </>
   )
 }

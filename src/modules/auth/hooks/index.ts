@@ -1,7 +1,24 @@
+import { useContext, useEffect } from 'react'
 import axios from 'lib/axios'
-import { useEffect } from 'react'
-import { useAuth } from './useAuth'
-import useRefreshToken from './useRefreshToken'
+import { AuthContext } from '../contexts'
+
+export function useAuth() {
+  return useContext(AuthContext)
+}
+
+export const useRefreshToken = () => {
+  const { state, dispatch } = useAuth()
+
+  const refresh = async () => {
+    const res = await axios.get('/auth/refresh')
+    const { data } = res.data
+
+    dispatch({ type: 'LOGIN', payload: { ...state, token: data.token } })
+
+    return data.token
+  }
+  return refresh
+}
 
 export function useAPI() {
   const { state, dispatch } = useAuth()
@@ -24,7 +41,11 @@ export function useAPI() {
       async (error) => {
         const prevRequest = error?.config
         if (error?.response?.status === 403 && !prevRequest?.sent) {
-          dispatch({ type: 'LOGOUT' })
+          return dispatch({ type: 'LOGOUT' })
+          // prevRequest.sent = true
+          // const newAccessToken = await refresh()
+          // prevRequest.headers['Authorization'] = `Bearer ${newAccessToken}`
+          // return axios(prevRequest)
         }
         return Promise.reject(error)
       }
