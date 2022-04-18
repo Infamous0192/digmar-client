@@ -5,19 +5,20 @@ interface Element {
 interface Props extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string
   error?: string
+  children: React.ReactNode
 }
 
 const Select: React.FC<Props> & Element = (props) => {
   return (
     <>
-      <label htmlFor={props.name} className="block text-sm font-medium text-slate-800 mb-1">
+      <label htmlFor={props.name} className="block text-sm font-medium text-gray-800 mb-1">
         {props.label}
       </label>
       <select
         {...props}
         id={props.name}
-        className={`focus:ring-indigo-100 focus:border-indigo-300 block w-full px-2 py-1 text-sm shadow-sm ${
-          props.error ? 'border-red-500' : 'border-slate-300'
+        className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full px-2 py-1 text-sm shadow-sm ${
+          props.error ? 'border-red-500' : 'border-gray-300'
         } rounded`}
       >
         {props.children}

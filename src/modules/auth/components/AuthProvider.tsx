@@ -18,7 +18,11 @@ const authReducer = (state: AuthState, action: AuthAction): AuthState => {
   }
 }
 
-export const AuthProvider: React.FC = ({ children }) => {
+type Props = {
+  children: JSX.Element
+}
+
+export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState)
 
   useEffect(() => {

@@ -1,24 +1,24 @@
-import { AxiosError } from 'axios'
-import { Button } from 'components/elements'
-import { TextField } from 'components/forms'
-import { AuthLayout } from 'components/layouts'
-import { useForm } from 'hooks'
+import { useRouter } from 'next/router'
 import axios from 'lib/axios'
-import { useAuth } from 'modules/auth'
-import { Link, useNavigate } from 'react-router-dom'
 
-const Daftar: React.FC = () => {
-  const navigate = useNavigate()
+import { Button, Link } from 'components/elements'
+import { TextField } from 'components/forms'
+import { AuthLayout } from 'layouts/AuthLayout'
+import { useForm } from 'hooks'
+
+const RegisterPage: React.FC = () => {
   const { values, handleChange, useSubmit, setErrors, errors } = useForm()
+  const router = useRouter()
 
   const handleSubmit = useSubmit(async () => {
     try {
       const { data } = await axios.post('/register', values)
-      navigate('/masuk', {
-        state: {
-          message: 'Anda berhasil terdaftar, silahkan login',
-        },
-      })
+      router.push('/masuk')
+      // navigate('/masuk', {
+      //   state: {
+      //     message: 'Anda berhasil terdaftar, silahkan login',
+      //   },
+      // })
       // const res = await axios.get('/me', {
       //   headers: {
       //     Authorization: `bearer ${token}`,
@@ -40,7 +40,7 @@ const Daftar: React.FC = () => {
 
   return (
     <AuthLayout>
-      <div className="max-w-xs sm:max-w-sm w-full px-4">
+      <div className="max-w-xs sm:max-w-md w-full px-4">
         <h1 className="font-bold text-2xl mb-2">Sign Up</h1>
         <form onSubmit={handleSubmit} className="space-y-3.5 mt-2">
           <div>
@@ -107,4 +107,4 @@ const Daftar: React.FC = () => {
   )
 }
 
-export default Daftar
+export default RegisterPage

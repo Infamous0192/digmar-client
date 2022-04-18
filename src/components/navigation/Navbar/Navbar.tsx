@@ -1,36 +1,22 @@
 import { Fragment, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useAuth } from 'modules/auth'
-import { Button } from 'components/elements'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Button, Link } from 'components/elements'
 
-import logo from 'assets/logo.png'
-
-const user = {
-  name: 'Dwa Meizadewa',
-  email: 'infamous0192@gmail.com',
-  imageUrl: 'https://dummyimage.com/100/dfdfdf/dfdfdf',
-}
 const navigation = [
   { name: 'Beranda', href: '/', current: true },
   { name: 'Kelas', href: '/kelas', current: false },
   { name: 'Event', href: '#', current: false },
   { name: 'Bootcamp', href: '#', current: false },
 ]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 const Navbar: React.FC = () => {
   const [top, setTop] = useState(true)
+  const router = useRouter()
   const { state, dispatch } = useAuth()
-  const navigate = useNavigate()
 
   // detect whether user has scrolled the page down by 10px
   useEffect(() => {
@@ -43,7 +29,7 @@ const Navbar: React.FC = () => {
 
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' })
-    navigate('/')
+    router.push('/')
   }
 
   return (
@@ -59,19 +45,19 @@ const Navbar: React.FC = () => {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0 -pr-4">
-                  <img className="h-8" src={logo} alt="Logo Siap Cuan" />
+                  <img className="h-8" src="/logo.png" alt="Logo Siap Cuan" />
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
-                      <NavLink
+                      <Link
                         key={item.name}
                         to={item.href}
                         className="font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm"
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </NavLink>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -91,7 +77,11 @@ const Navbar: React.FC = () => {
                         <div>
                           <Menu.Button className="max-w-xs rounded-full flex items-center text-sm">
                             <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <img
+                              className="h-8 w-8 rounded-full"
+                              src="https://dummyimage.com/100/dfdfdf/dfdfdf"
+                              alt=""
+                            />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -106,26 +96,26 @@ const Navbar: React.FC = () => {
                           <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                             <Menu.Item>
                               {({ active }) => (
-                                <NavLink
+                                <Link
                                   to="/profile"
                                   className={`${
                                     active && 'bg-gray-100'
                                   } block px-4 py-2 text-sm text-gray-900`}
                                 >
                                   Your Profile
-                                </NavLink>
+                                </Link>
                               )}
                             </Menu.Item>
                             <Menu.Item>
                               {({ active }) => (
-                                <NavLink
+                                <Link
                                   to="/profile"
                                   className={`${
                                     active && 'bg-gray-100'
                                   } block px-4 py-2 text-sm text-gray-900`}
                                 >
                                   Settings
-                                </NavLink>
+                                </Link>
                               )}
                             </Menu.Item>
                             <Menu.Item>
@@ -217,7 +207,11 @@ const Navbar: React.FC = () => {
                   <>
                     <div className="flex items-center px-5">
                       <div className="flex-shrink-0">
-                        <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                        <img
+                          className="h-10 w-10 rounded-full"
+                          src="https://dummyimage.com/100/dfdfdf/dfdfdf"
+                          alt=""
+                        />
                       </div>
                       <div className="ml-3">
                         <div className="font-medium text-gray-900">{state.creds?.username}</div>
