@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -44,8 +45,14 @@ const Navbar: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
-                <div className="flex-shrink-0 -pr-4">
-                  <img className="h-8" src="/logo.png" alt="Logo Siap Cuan" />
+                <div className="flex-shrink-0 -pr-4 h-8">
+                  <Image
+                    src="/logo.png"
+                    width="64"
+                    height="32px"
+                    objectFit="contain"
+                    alt="logo siap cuan"
+                  />
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
@@ -77,8 +84,10 @@ const Navbar: React.FC = () => {
                         <div>
                           <Menu.Button className="max-w-xs rounded-full flex items-center text-sm">
                             <span className="sr-only">Open user menu</span>
-                            <img
+                            <Image
                               className="h-8 w-8 rounded-full"
+                              width={32}
+                              height={32}
                               src="https://dummyimage.com/100/dfdfdf/dfdfdf"
                               alt=""
                             />
@@ -207,7 +216,9 @@ const Navbar: React.FC = () => {
                   <>
                     <div className="flex items-center px-5">
                       <div className="flex-shrink-0">
-                        <img
+                        <Image
+                          width={40}
+                          height={40}
                           className="h-10 w-10 rounded-full"
                           src="https://dummyimage.com/100/dfdfdf/dfdfdf"
                           alt=""

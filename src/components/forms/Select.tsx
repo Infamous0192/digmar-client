@@ -29,5 +29,6 @@ const Select: React.FC<Props> & Element = (props) => {
 }
 
 Select.Option = (props) => <option {...props}>{props.children}</option>
+Select.Option.displayName = 'Option'
 
 export default Select

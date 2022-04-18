@@ -2,6 +2,7 @@ import { ClockIcon, UsersIcon } from '@heroicons/react/outline'
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { Button } from 'components/elements'
 import { LandingLayout } from 'layouts/LandingLayout'
+import Image from 'next/image'
 
 const CourseDetail: React.FC = () => {
   return (
@@ -12,9 +13,10 @@ const CourseDetail: React.FC = () => {
             <div className="md:col-span-8">
               <div className="relative md:flex md:space-x-4 mb-8 bg-white p-4 border border-gray-200 rounded-md shadow">
                 <div className="w-full relative shrink-0 md:w-48 aspect-video md:aspect-square rounded-md overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src="https://d17ivq9b7rppb3.cloudfront.net/original/academy/memulai_pemrograman_dengan_kotlin_logo_230421132137.jpg"
-                    className="w-full h-full inset-0 object-cover object-center "
+                    className="w-full h-full inset-0 object-cover object-center"
+                    layout="fill"
                     alt=""
                   />
                 </div>
