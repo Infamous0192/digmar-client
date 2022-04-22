@@ -3,20 +3,19 @@ import { Button } from 'components/elements'
 interface Props {
   category: string
   active: string
-  onClick: Function
-  children: React.ReactNode
+  onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const CourseButton: React.FC<Props> = ({ active, category, onClick, children }) => {
+const CourseButton: React.FC<Props> = ({ active, category, onClick }) => {
   return (
     <Button
       color={active === category ? 'primary' : 'light'}
       size="sm"
       rounded="full"
       className="text-sm capitalize"
-      onClick={() => onClick(category)}
+      onClick={onClick}
     >
-      {children}
+      {category}
     </Button>
   )
 }

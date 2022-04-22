@@ -25,15 +25,8 @@ const Courses: React.FC = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-8 md:pb-12">
-            <h2 className="h2 mb-4">Kelas Unggulan</h2>
-            <p className="md:text-xl text-gray-600" data-aos="zoom-y-out">
-              Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit
-              libero cursus mattis.
-            </p>
-          </div>
+        <div className="py-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-8 text-center">Kelas Unggulan</h2>
 
           <CourseList />
           <div className="mt-8 md:mt-12 flex items-center justify-end">
