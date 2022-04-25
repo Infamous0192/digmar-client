@@ -4,7 +4,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const Checkbox: React.FC<Props> = ({ children, ...props }) => {
   return (
-    <>
+    <div className="flex items-center">
       <input
         {...props}
         id={props.name}
@@ -14,7 +14,7 @@ const Checkbox: React.FC<Props> = ({ children, ...props }) => {
       <label htmlFor={props.name} className="pl-3 block text-sm text-gray-700 capitalize">
         {children}
       </label>
-    </>
+    </div>
   )
 }
 

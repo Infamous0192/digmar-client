@@ -11,7 +11,7 @@ const CourseDetail: NextPage = () => {
     <LandingLayout>
       <main className="flex-grow py-12">
         <div className="max-w-7xl pb-12 md:pb-20 pt-12 mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-12 gap-8 mt-8 relative">
+          <div className="grid md:grid-cols-12 gap-x-8 mt-8 relative">
             <div className="md:col-span-8">
               <Link
                 to="/kelas"
@@ -110,7 +110,7 @@ const CourseDetail: NextPage = () => {
                   </li>
                 </ul>
                 <div className="mb-4 mt-2">
-                  <div className="text-sm">Biaya</div>
+                  <div className="text-sm font-medium">Biaya</div>
                   <div className="text-3xl leading-none font-gray-600 font-extrabold">
                     Rp. 10.000
                   </div>

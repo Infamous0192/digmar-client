@@ -6,6 +6,8 @@ import { Course } from 'types'
 import CourseItem from './CourseItem'
 import CourseSkeleton from './CourseSkeleton'
 
+const tingkatan = ['dasar', 'menengah', 'lanjut', 'ahli']
+
 type State = {
   category: { [key: string]: boolean }
   keyword: string
@@ -93,71 +95,37 @@ const CourseDataList: React.FC = () => {
         <div className="bg-white rounded border border-gray-200 px-4 lg:divide-y divide-gray-300">
           <div className="py-2 lg:py-4">
             <h3 className="font-semibold mb-3">Kategori Kelas</h3>
-            {category.map((item) => (
-              <div key={item} className="flex items-center mb-2">
-                <Checkbox name={item} onChange={handleCategory(item)}>
-                  {item}
-                </Checkbox>
-              </div>
-            ))}
+            {!loading ? (
+              category.map((item) => (
+                <div key={item} className="mb-2">
+                  <Checkbox name={item} onChange={handleCategory(item)}>
+                    {item}
+                  </Checkbox>
+                </div>
+              ))
+            ) : (
+              <>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+              </>
+            )}
           </div>
           <div className="py-2 lg:py-4">
             <h3 className="font-semibold mb-3">Tingkat</h3>
-            <div className="flex items-center mb-2">
-              <input
-                id="dasar"
-                name="dasar"
-                type="checkbox"
-                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
-              />
-              <label htmlFor="dasar" className="ml-2 block text-sm text-gray-700">
-                Dasar
-              </label>
-            </div>
-            <div className="flex items-center mb-2">
-              <input
-                id="pemula"
-                name="pemula"
-                type="checkbox"
-                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
-              />
-              <label htmlFor="pemula" className="ml-2 block text-sm text-gray-700">
-                Pemula
-              </label>
-            </div>
-            <div className="flex items-center mb-2">
-              <input
-                id="menengah"
-                name="menengah"
-                type="checkbox"
-                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
-              />
-              <label htmlFor="menengah" className="ml-2 block text-sm text-gray-700">
-                Menengah
-              </label>
-            </div>
-            <div className="flex items-center mb-2">
-              <input
-                id="mahir"
-                name="mahir"
-                type="checkbox"
-                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
-              />
-              <label htmlFor="mahir" className="ml-2 block text-sm text-gray-700">
-                Mahir
-              </label>
-            </div>
-            <div className="flex items-center mb-2">
-              <input
-                id="professional"
-                name="professional"
-                type="checkbox"
-                className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
-              />
-              <label htmlFor="professional" className="ml-2 block text-sm text-gray-700">
-                Professional
-              </label>
-            </div>
+            {!loading ? (
+              tingkatan.map((item) => (
+                <div key={item} className="mb-2">
+                  <Checkbox name={item}>{item}</Checkbox>
+                </div>
+              ))
+            ) : (
+              <>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+                <div className="bg-gray-200 rounded h-5 w-32 animate-pulse mb-2"></div>
+              </>
+            )}
           </div>
         </div>
       </div>
