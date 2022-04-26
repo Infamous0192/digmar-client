@@ -7,3 +7,13 @@ export interface Course {
   nama_kelas: string
   photo: string
 }
+
+export type Navigation = {
+  title: string
+  href: string
+  icon: React.FC<any>
+  links?: {
+    title: string
+    href: string
+  }[]
+}

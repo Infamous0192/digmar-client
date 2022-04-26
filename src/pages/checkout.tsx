@@ -2,7 +2,7 @@ import { Button } from 'components/elements'
 import { TextField } from 'components/forms'
 import { LandingLayout } from 'layouts/LandingLayout'
 
-const RegisterCourse: React.FC = () => {
+const CheckoutPage: React.FC = () => {
   return (
     <LandingLayout>
       <main className="flex-grow py-12">
@@ -65,4 +65,4 @@ const RegisterCourse: React.FC = () => {
   )
 }
 
-export default RegisterCourse
+export default CheckoutPage

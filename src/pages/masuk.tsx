@@ -29,6 +29,12 @@ const LoginPage: NextPage = () => {
           token,
         },
       })
+
+      if (sessionStorage.getItem('order')) {
+        router.push('/checkout')
+      } else {
+        router.push('/account/dashboard')
+      }
     } catch (error: any) {
       const { messages } = error.response.data
       if (!messages.error) return setErrors(messages)

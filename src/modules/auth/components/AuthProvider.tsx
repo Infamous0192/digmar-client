@@ -11,7 +11,7 @@ const authReducer = (state: AuthState, action: AuthAction): AuthState => {
 
       return { ...state, creds, token, isLoaded: true, isAuthenticated: true }
     case 'LOGOUT':
-      sessionStorage.removeItem('token')
+      sessionStorage.clear()
       return { ...initialState, isLoaded: true, isAuthenticated: false }
     default:
       return state

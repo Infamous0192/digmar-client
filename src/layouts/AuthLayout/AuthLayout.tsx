@@ -13,9 +13,11 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     if (state.isAuthenticated && router.isReady) router.push('/')
-  }, [state, router.isReady])
+  }, [router.isReady])
 
-  if (state.isAuthenticated || !router.isReady) return null
+  // return null
+
+  if (state.isAuthenticated || !state.isLoaded) return null
 
   return (
     <div className="w-full h-screen lg:grid grid-cols-2">

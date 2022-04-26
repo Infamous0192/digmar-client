@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -105,12 +107,25 @@ module.exports = {
         9: '2.25rem',
         10: '2.5rem',
       },
+      screens: {
+        xs: '480px',
+      },
       minWidth: {
         10: '2.5rem',
         48: '12rem',
+        36: '9rem',
+        44: '11rem',
+        56: '14rem',
+        60: '15rem',
+        72: '18rem',
+        80: '20rem',
       },
       opacity: {
         90: '0.9',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
       },
       scale: {
         98: '.98',
@@ -136,5 +151,16 @@ module.exports = {
     boxShadow: ['responsive', 'hover', 'focus', 'focus-within'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    // eslint-disable-next-line global-require
+    require('@tailwindcss/forms'),
+    // add custom variant for expanding sidebar
+    plugin(({ addVariant, e }) => {
+      addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {
+        modifySelectors(
+          ({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`
+        )
+      })
+    }),
+  ],
 }

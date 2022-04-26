@@ -5,8 +5,22 @@ import { LockClosedIcon } from '@heroicons/react/solid'
 import { Button, Link } from 'components/elements'
 import { LandingLayout } from 'layouts/LandingLayout'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useAuth } from 'modules/auth'
 
 const CourseDetail: NextPage = () => {
+  const router = useRouter()
+  const { state } = useAuth()
+
+  function registerCourse() {
+    if (!state.isAuthenticated) {
+      sessionStorage.setItem('order', 'KL03')
+      router.push('/masuk')
+    } else {
+      router.push('/checkout')
+    }
+  }
+
   return (
     <LandingLayout>
       <main className="flex-grow py-12">
@@ -21,7 +35,7 @@ const CourseDetail: NextPage = () => {
                 <span>Kembali ke Daftar Kelas</span>
               </Link>
               <h1 className="text-2xl leading-tight md:text-3xl font-semibold">
-                Front-End Learning: Hands-On HTML & CSS In Real Web Apps
+                Kelas Digital Marketing
               </h1>
               <div className="my-4 sm:flex item-center justify-between">
                 <div className="flex items-center space-x-1.5 text-sm mt-2">
@@ -112,12 +126,14 @@ const CourseDetail: NextPage = () => {
                 <div className="mb-4 mt-2">
                   <div className="text-sm font-medium">Biaya</div>
                   <div className="text-3xl leading-none font-gray-600 font-extrabold">
-                    Rp. 10.000
+                    Rp. 100.000
                   </div>
                 </div>
-                <Button color="secondary" className="w-full sticky top-0">
+                <Button color="secondary" onClick={registerCourse} className="w-full sticky top-0">
                   Daftar Kelas
                 </Button>
+                {/* <Link to="/kelas/KL03/daftar">
+                </Link> */}
               </div>
             </div>
           </div>
