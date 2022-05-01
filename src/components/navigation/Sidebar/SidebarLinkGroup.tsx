@@ -49,9 +49,7 @@ export const SidebarLinkGroup: React.FC<Props> = (props) => {
             <props.icon
               className={`h-6 w-6 ${props.active ? 'text-sunglow-500' : 'text-slate-700'}`}
             />
-            <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-              {props.title}
-            </span>
+            <span className="text-sm font-medium ml-3 duration-200">{props.title}</span>
           </div>
           <div className="flex shrink-0 ml-2">
             <ChevronDownIcon
@@ -62,7 +60,7 @@ export const SidebarLinkGroup: React.FC<Props> = (props) => {
           </div>
         </div>
       </a>
-      <div className="lg:hidden lg:sidebar-expanded:block 2xl:block">
+      <div className="">
         <ul className={`pl-9 mt-1 ${!open && 'hidden'}`}>
           {props.navigation.map(({ title, href }) => (
             <li key={title} className="mb-1 last:mb-0">
@@ -70,9 +68,7 @@ export const SidebarLinkGroup: React.FC<Props> = (props) => {
                 to={href}
                 className="block text-slate-900 hover:text-sunglow-800 transition duration-150 truncate"
               >
-                <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                  {title}
-                </span>
+                <span className="text-sm font-medium duration-200">{title}</span>
               </Link>
             </li>
           ))}

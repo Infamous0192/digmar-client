@@ -18,7 +18,7 @@ export const SidebarLink: React.FC<Props> = (props) => {
           <props.icon
             className={`shrink-0 h-6 w-6 ${props.active ? 'text-sunglow-500' : 'text-gray-700'}`}
           />
-          <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+          <span className="text-sm font-medium ml-3 duration-200">
             {props.title}
           </span>
         </div>
