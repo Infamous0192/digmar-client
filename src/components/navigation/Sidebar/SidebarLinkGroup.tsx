@@ -66,7 +66,7 @@ export const SidebarLinkGroup: React.FC<Props> = (props) => {
             <li key={title} className="mb-1 last:mb-0">
               <Link
                 to={href}
-                className="block text-slate-900 hover:text-sunglow-800 transition duration-150 truncate"
+                className="block text-slate-800 hover:text-sunglow-800 transition duration-150 truncate"
               >
                 <span className="text-sm font-medium duration-200">{title}</span>
               </Link>
