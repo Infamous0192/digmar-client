@@ -1,6 +1,6 @@
 import { Button } from 'components/elements'
 import { TextField } from 'components/forms'
-import { LandingLayout } from 'layouts/LandingLayout'
+import { LandingLayout } from 'layouts/landing'
 
 const CheckoutPage: React.FC = () => {
   return (

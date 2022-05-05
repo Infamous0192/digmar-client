@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { SidebarContext, defaultState } from 'contexts/sidebar'
 import { Navigation } from 'types'

@@ -1,6 +1,6 @@
 import { PlayIcon, VideoCameraIcon } from '@heroicons/react/solid'
 import { Button } from 'components/elements'
-import { LandingLayout } from 'layouts/LandingLayout'
+import { LandingLayout } from 'layouts/landing'
 import type { NextPage } from 'next'
 
 const CourseDetail: NextPage = () => {

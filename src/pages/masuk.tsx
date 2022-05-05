@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import axios from 'lib/axios'
 import { Button, Link } from 'components/elements'
 import { TextField } from 'components/forms'
-import { AuthLayout } from 'layouts/AuthLayout'
+import { AuthLayout } from 'layouts/auth'
 import { useAuth } from 'modules/auth'
 import { useForm } from 'hooks'
 
@@ -15,20 +15,27 @@ const LoginPage: NextPage = () => {
 
   const handleSubmit = useSubmit(async () => {
     try {
-      const { data: token } = await axios.post('/login', values)
-      const res = await axios.get('/me', {
-        headers: {
-          Authorization: `bearer ${token}`,
-        },
-      })
+      // const { data: token } = await axios.post('/login', values)
+      // const res = await axios.get('/me', {
+      //   headers: {
+      //     Authorization: `bearer ${token}`,
+      //   },
+      // })
 
       dispatch({
         type: 'LOGIN',
         payload: {
-          creds: { ...res.data, email: 'infamous0192@gmail.com' },
-          token,
+          creds: { ...values, email: 'infamous0192@gmail.com' },
+          token: 'asdqwe123',
         },
       })
+      // dispatch({
+      //   type: 'LOGIN',
+      //   payload: {
+      //     creds: { ...res.data, email: 'infamous0192@gmail.com' },
+      //     token,
+      //   },
+      // })
 
       if (sessionStorage.getItem('order')) {
         router.push('/checkout')

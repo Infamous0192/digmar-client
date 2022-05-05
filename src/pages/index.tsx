@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { BestChoices, Courses, Features, Hero, Testimonials, Events } from 'container/LandingPage'
-import { LandingLayout } from 'layouts/LandingLayout'
+import { LandingLayout } from 'layouts/landing'
 
 const Home: NextPage = () => {
   return (

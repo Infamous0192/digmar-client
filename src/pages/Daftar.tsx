@@ -3,7 +3,7 @@ import axios from 'lib/axios'
 
 import { Button, Link } from 'components/elements'
 import { TextField } from 'components/forms'
-import { AuthLayout } from 'layouts/AuthLayout'
+import { AuthLayout } from 'layouts/auth'
 import { useForm } from 'hooks'
 
 const RegisterPage: React.FC = () => {

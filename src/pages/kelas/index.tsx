@@ -1,5 +1,5 @@
 import { CourseDataList } from 'container/CourseList'
-import { LandingLayout } from 'layouts/LandingLayout'
+import { LandingLayout } from 'layouts/landing'
 
 const Course: React.FC = () => {
   return (

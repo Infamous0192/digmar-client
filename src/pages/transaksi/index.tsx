@@ -2,7 +2,7 @@ import { ArrowLeftIcon, ClockIcon, UsersIcon } from '@heroicons/react/outline'
 import { BadgeCheckIcon, StarIcon } from '@heroicons/react/solid'
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { Badge, Button, Link } from 'components/elements'
-import { LandingLayout } from 'layouts/LandingLayout'
+import { LandingLayout } from 'layouts/landing'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 
