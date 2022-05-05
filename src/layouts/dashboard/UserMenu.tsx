@@ -6,7 +6,6 @@ const UserMenu: React.FC = () => {
   const { state, dispatch } = useAuth()
 
   const handleLogout = () => {
-    // setOpen(!open)
     dispatch({ type: 'LOGOUT' })
   }
 
@@ -44,15 +43,15 @@ const UserMenu: React.FC = () => {
             <div className="font-medium text-slate-800">{state.creds?.username}</div>
             <div className="text-xs text-slate-500 italic capitalize">Customer</div>
           </div>
-          <Menu.Item>
+          <Menu.Item as="div">
             <Link
               className="font-medium text-sm text-sunglow-500 hover:text-sunglow-600 flex items-center py-1 px-3"
               to="/"
             >
-              Settings
+              Landing Page
             </Link>
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item as="div">
             <button
               className="font-medium text-sm text-sunglow-500 hover:text-sunglow-600 flex items-center py-1 px-3"
               onClick={handleLogout}

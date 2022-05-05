@@ -25,7 +25,7 @@ const LoginPage: NextPage = () => {
       dispatch({
         type: 'LOGIN',
         payload: {
-          creds: { ...values, email: 'infamous0192@gmail.com' },
+          creds: { id_user: '123', username: 'Dwa Meizadewa', email: 'infamous0192@gmail.com' },
           token: 'asdqwe123',
         },
       })

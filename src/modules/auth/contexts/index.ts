@@ -11,7 +11,7 @@ export interface AuthAction {
 }
 
 export type Creds = {
-  id_user: string
+  id_user: string | number
   email: string
   username: string
 }
