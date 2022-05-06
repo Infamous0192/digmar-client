@@ -40,7 +40,7 @@ const LoginPage: NextPage = () => {
       if (sessionStorage.getItem('order')) {
         router.push('/checkout')
       } else {
-        router.push('/account/dashboard')
+        router.push('/member')
       }
     } catch (error: any) {
       const { messages } = error.response.data

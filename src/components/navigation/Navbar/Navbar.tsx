@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
                             <Menu.Item>
                               {({ active }) => (
                                 <Link
-                                  to="/account/dashboard"
+                                  to="/member"
                                   className={`${
                                     active && 'bg-gray-100'
                                   } block px-4 py-2 text-sm text-gray-900`}
@@ -239,7 +239,7 @@ const Navbar: React.FC = () => {
                     <div className="mt-3 px-2 space-y-1">
                       <Disclosure.Button
                         as={Link}
-                        to="/account/dashboard"
+                        to="/member"
                         className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
                       >
                         Dashboard

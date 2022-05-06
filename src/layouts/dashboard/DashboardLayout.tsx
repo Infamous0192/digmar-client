@@ -9,27 +9,28 @@ import { useAuth } from 'modules/auth'
 import {
   AcademicCapIcon,
   ChartBarIcon,
+  CogIcon,
   ShoppingCartIcon,
   UserCircleIcon,
 } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 
 const navigation: Navigation[] = [
-  { title: 'Dashboard', href: '/account/dashboard', icon: ChartBarIcon },
+  { title: 'Dashboard', href: '/member', icon: ChartBarIcon },
   {
     title: 'Kelas',
-    href: '/account/kelas',
+    href: '/member/kelas',
     icon: AcademicCapIcon,
     links: [
       { title: 'Semua Kelas', href: '/kelas' },
       {
         title: 'Kelas Saya',
-        href: '/account/kelas',
+        href: '/member/kelas',
       },
     ],
   },
-  { title: 'Transaksi', href: '/account/transaksi', icon: ShoppingCartIcon },
-  { title: 'Profile', href: '/account/transaksi', icon: UserCircleIcon },
+  { title: 'Transaksi', href: '/member/transaksi', icon: ShoppingCartIcon },
+  { title: 'Settings', href: '/member/settings', icon: CogIcon },
 ]
 
 interface Props {

@@ -1,6 +1,7 @@
 import { useAuth } from 'modules/auth'
 import { Menu, Transition } from '@headlessui/react'
 import { Link } from 'components/elements'
+import { LogoutIcon } from '@heroicons/react/outline'
 
 const UserMenu: React.FC = () => {
   const { state, dispatch } = useAuth()
@@ -43,21 +44,13 @@ const UserMenu: React.FC = () => {
             <div className="font-medium text-slate-800">{state.creds?.username}</div>
             <div className="text-xs text-slate-500 italic capitalize">Customer</div>
           </div>
-          <Menu.Item as="div">
-            <Link
-              className="font-medium text-sm text-sunglow-500 hover:text-sunglow-600 flex items-center py-1 px-3"
-              to="/"
-            >
-              Landing Page
-            </Link>
-          </Menu.Item>
-          <Menu.Item as="div">
-            <button
-              className="font-medium text-sm text-sunglow-500 hover:text-sunglow-600 flex items-center py-1 px-3"
-              onClick={handleLogout}
-            >
-              Sign Out
-            </button>
+          <Menu.Item
+            as="button"
+            className="font-medium hover:bg-gray-50 w-full text-sm text-red-500 hover:text-red-600 flex items-center py-1 px-3"
+            onClick={handleLogout}
+          >
+            <LogoutIcon className="w-5 h-5 inline" />
+            <span className="leading-none ml-2">Keluar</span>
           </Menu.Item>
         </Menu.Items>
       </Transition>

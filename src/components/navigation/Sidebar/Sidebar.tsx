@@ -87,7 +87,7 @@ export const Sidebar: React.FC<Props> = ({ navigation }) => {
                 <SidebarLink
                   key={title}
                   to={href}
-                  active={href !== '/' ? pathname.includes(href) : pathname === href}
+                  active={href !== '/member' ? pathname.includes(href) : pathname === href}
                   title={title}
                   icon={icon}
                 />
