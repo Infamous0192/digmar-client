@@ -89,7 +89,7 @@ const RegisterPage: React.FC = () => {
             />
           </div> */}
           <div className="flex items-center justify-between py-3">
-            <Button size="sm" className="text-sm">
+            <Button className="text-sm">
               Daftar
             </Button>
           </div>

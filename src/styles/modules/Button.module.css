@@ -3,7 +3,7 @@
 }
 
 .primary {
-  @apply text-white bg-sunglow-600 hover:bg-sunglow-500;
+  @apply text-white bg-sunglow-500 hover:bg-sunglow-600;
 }
 
 .secondary {
@@ -11,7 +11,7 @@
 }
 
 .light {
-  @apply text-gray-900 bg-white hover:bg-gray-50 border border-gray-200;
+  @apply text-slate-600 bg-white border border-gray-200 hover:border-gray-300;
 }
 
 .round-sm {
@@ -27,13 +27,21 @@
 }
 
 .xs {
-  @apply px-3 py-1 shadow;
+  @apply px-2 py-0.5 text-sm;
 }
 
 .sm {
-  @apply px-3 py-1 md:px-4 md:py-2 shadow;
+  @apply px-3 py-1 text-sm;
 }
 
 .md {
+  @apply px-3 py-2 text-sm;
+}
+
+.lg {
+  @apply px-4 py-3 text-sm;
+}
+
+.xl {
   @apply px-6 py-2 md:px-8 md:py-3 shadow-lg;
 }

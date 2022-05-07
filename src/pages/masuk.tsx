@@ -80,7 +80,7 @@ const LoginPage: NextPage = () => {
             <a className="text-gray-800 underline text-sm" href="#">
               Lupa password?
             </a>
-            <Button size="sm" className="text-sm">
+            <Button className="text-sm">
               Masuk
             </Button>
           </div>

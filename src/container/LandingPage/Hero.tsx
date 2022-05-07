@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               </p>
               <div className="" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <Button color="primary" size="md" className="w-full mb-4 sm:w-auto sm:mb-0">
+                  <Button color="primary" size="xl" className="w-full mb-4 sm:w-auto sm:mb-0">
                     Mulai Sekarang
                   </Button>
                 </div>

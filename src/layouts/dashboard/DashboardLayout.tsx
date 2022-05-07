@@ -6,13 +6,7 @@ import { Navigation } from 'types'
 import { Sidebar } from 'components/navigation'
 import Header from './Header'
 import { useAuth } from 'modules/auth'
-import {
-  AcademicCapIcon,
-  ChartBarIcon,
-  CogIcon,
-  ShoppingCartIcon,
-  UserCircleIcon,
-} from '@heroicons/react/solid'
+import { AcademicCapIcon, ChartBarIcon, CogIcon, ShoppingCartIcon } from '@heroicons/react/solid'
 import { useRouter } from 'next/router'
 
 const navigation: Navigation[] = [

@@ -12,9 +12,9 @@ const TextField: React.FC<Props> = (props) => {
       <input
         {...props}
         id={props.name}
-        className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full text-sm px-2 py-1 shadow-sm ${
+        className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full text-sm pl-3 pr-12 leading-none py-2 shadow-sm ${
           props.error ? 'border-red-500' : 'border-gray-300'
-        } rounded`}
+        } rounded-md`}
       />
       <p className="text-red-500 text-xs m-0 p-0 h-1">{props.error || ''}</p>
     </>

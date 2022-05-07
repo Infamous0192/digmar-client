@@ -2,7 +2,7 @@ import styles from 'styles/modules/Button.module.css'
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: 'primary' | 'secondary' | 'light'
-  size?: 'xs' | 'sm' | 'md' | 'lg'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   rounded?: 'sm' | 'md' | 'full'
   children: React.ReactNode
 }

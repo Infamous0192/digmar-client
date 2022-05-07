@@ -38,8 +38,8 @@ const Transaction: NextPage = () => {
                     <h2 className="text-lg sm:text-xl font-bold leading-none mb-1">
                       Javascript Fullstack Developer
                     </h2>
-                    <p className="text-sunglow-500 font-medium leading-none text-sm md:text-base">
-                      Akuntansi
+                    <p className="text-sunglow-500 font-medium text-sm md:text-base">
+                      Kelas
                     </p>
                   </div>
                 </div>

@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
                         Masuk
                       </Link>
                       <Link to="/daftar">
-                        <Button color="secondary" size="sm" className="ml-8">
+                        <Button color="secondary" size="md" className="ml-8">
                           Daftar
                         </Button>
                       </Link>
@@ -201,7 +201,7 @@ const Navbar: React.FC = () => {
                 {!state.isAuthenticated ? (
                   <div className="px-5">
                     <Link to="/daftar">
-                      <Button size="sm" color="secondary" className="w-full">
+                      <Button size="md" color="secondary" className="w-full">
                         Daftar
                       </Button>
                     </Link>

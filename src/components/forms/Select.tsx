@@ -17,9 +17,9 @@ const Select: React.FC<Props> & Element = (props) => {
       <select
         {...props}
         id={props.name}
-        className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full px-2 py-1 text-sm shadow-sm ${
+        className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full text-sm px-3 leading-none py-2 shadow-sm ${
           props.error ? 'border-red-500' : 'border-gray-300'
-        } rounded`}
+        } rounded-md`}
       >
         {props.children}
       </select>
