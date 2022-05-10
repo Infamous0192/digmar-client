@@ -4,13 +4,16 @@ interface Element {
   Footer: React.FC<React.HTMLAttributes<HTMLElement>>
 }
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode
 }
 
-const Card: React.FC<Props> & Element = ({ children }) => {
+const Card: React.FC<Props> & Element = ({ children, className, ...props }) => {
   return (
-    <div className="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded border border-gray-200">
+    <div
+      {...props}
+      className={`flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded border border-gray-200 ${className}`}
+    >
       {children}
     </div>
   )
@@ -22,7 +25,11 @@ Card.Header = ({ children, ...props }) => (
   </header>
 )
 
-Card.Body = (props) => <div {...props}>{props.children}</div>
+Card.Body = ({ className, children, ...props }) => (
+  <div className={`px-5 py-4 ${className}`} {...props}>
+    {children}
+  </div>
+)
 
 Card.Footer = ({ children }) => (
   <footer className="px-5 py-4 border-t border-gray-200">{children}</footer>

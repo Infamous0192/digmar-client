@@ -33,7 +33,7 @@ export const Sidebar: React.FC<Props> = ({ navigation }) => {
   })
 
   return (
-    <div>
+    <>
       <div
         className={`fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
           open ? 'opacity-100' : 'opacity-0 pointer-events-none'
@@ -104,6 +104,6 @@ export const Sidebar: React.FC<Props> = ({ navigation }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   )
 }

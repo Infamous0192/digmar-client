@@ -19,6 +19,10 @@
   display: none;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast
+}
+
 @tailwind utilities;
 
 $aos-distance: 10px;

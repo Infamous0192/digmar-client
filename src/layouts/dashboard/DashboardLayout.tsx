@@ -16,11 +16,11 @@ const navigation: Navigation[] = [
     href: '/member/kelas',
     icon: AcademicCapIcon,
     links: [
-      { title: 'Semua Kelas', href: '/kelas' },
       {
         title: 'Kelas Saya',
         href: '/member/kelas',
       },
+      { title: 'Semua Kelas', href: '/kelas' },
     ],
   },
   { title: 'Transaksi', href: '/member/transaksi', icon: ShoppingCartIcon },
@@ -50,7 +50,7 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
 
   return (
     <SidebarContext.Provider value={{ open, toggleOpen, setOpen }}>
-      <div className="flex h-screen overflow-hidden">
+      <div className="flex h-screen overflow-hidden bg-gray-50">
         <Sidebar navigation={navigation} />
         <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           <Header />
