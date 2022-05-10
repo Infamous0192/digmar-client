@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { DashboardLayout } from 'layouts/dashboard'
-import { Button, Card } from 'components/elements'
+import { Button, Card, Link } from 'components/elements'
 import { TextField } from 'components/forms'
 
 import { ArchiveIcon, BadgeCheckIcon, CashIcon, ShoppingCartIcon } from '@heroicons/react/solid'
@@ -62,9 +62,14 @@ const TransactionDetail: NextPage = () => {
                   <div className="font-semibold">01291247964</div>
                 </div>
               </div>
-              <Button color="secondary" className="w-full">
-                Konfirmasi Pembayaran
-              </Button>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=6289691786852&amp;text=Halo,%20Saya%20Dwa%20Meizadewa.%20Saya%20sudah%20melakukan%20pembayaran%20kelas%20Digital%20Marketing.%20Akses%20kelas%20untuk%20infamous0192@gmail.com.%20Berikut%20saya%20lampirkan%20foto%20bukti%20pembayaran:"
+              >
+                <Button color="secondary" className="w-full">
+                  Konfirmasi Pembayaran
+                </Button>
+              </a>
             </Card.Body>
             {/* <Card.Footer></Card.Footer> */}
           </Card>
