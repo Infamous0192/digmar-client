@@ -49,14 +49,14 @@ const TransactionDetail: NextPage = () => {
               <div className="grid sm:grid-cols-2 mb-4">
                 <div className="mb-2">
                   <div className="w-32 h-12">
-                    <Image src="/logo bni.png" width={645} height={240} />
+                    <Image alt="Logo BNI" src="/logo bni.png" width={645} height={240} />
                   </div>
                   <div className="font-medium">CV Tarkiz Paz Banua</div>
                   <div className="font-semibold">01291247964</div>
                 </div>
                 <div className="mb-2">
                   <div className="w-32 h-12">
-                    <Image src="/logo bsi.png" width={950} height={270} />
+                    <Image alt="Logo BSI" src="/logo bsi.png" width={950} height={270} />
                   </div>
                   <div className="font-medium">CV Tarkiz Paz Banua</div>
                   <div className="font-semibold">01291247964</div>
@@ -64,6 +64,7 @@ const TransactionDetail: NextPage = () => {
               </div>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://api.whatsapp.com/send?phone=6289691786852&amp;text=Halo,%20Saya%20Dwa%20Meizadewa.%20Saya%20sudah%20melakukan%20pembayaran%20kelas%20Digital%20Marketing.%20Akses%20kelas%20untuk%20infamous0192@gmail.com.%20Berikut%20saya%20lampirkan%20foto%20bukti%20pembayaran:"
               >
                 <Button color="secondary" className="w-full">

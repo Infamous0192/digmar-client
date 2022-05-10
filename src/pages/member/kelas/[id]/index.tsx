@@ -65,7 +65,7 @@ const MemberCourseDetail: NextPage = () => {
       </section>
 
       <div className="max-w-xl mx-auto w-full mt-8 relative">
-        <Image src="/sertifikat_dicoding.png" width={2339} height={1654} />
+        <Image alt="Sertifikat Dicoding" src="/sertifikat_dicoding.png" width={2339} height={1654} />
         <div className="bg-black w-full h-full inset-0 z-10 absolute bg-opacity-0 hover:bg-opacity-40 transition-all duration-300 cursor-pointer"></div>
       </div>
     </DashboardLayout>

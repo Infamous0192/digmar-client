@@ -4,10 +4,7 @@ export type AuthActionType = 'LOGIN' | 'LOGOUT'
 
 export interface AuthAction {
   type: AuthActionType
-  payload?: {
-    creds?: Creds,
-    token?: string
-  }
+  payload?: any
 }
 
 export type Creds = {

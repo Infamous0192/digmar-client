@@ -24,15 +24,18 @@ Card.Header = ({ children, ...props }) => (
     {children}
   </header>
 )
+Card.Header.displayName = 'Header'
 
 Card.Body = ({ className, children, ...props }) => (
   <div className={`px-5 py-4 ${className}`} {...props}>
     {children}
   </div>
 )
+Card.Body.displayName = 'Body'
 
 Card.Footer = ({ children }) => (
   <footer className="px-5 py-4 border-t border-gray-200">{children}</footer>
 )
+Card.Footer.displayName = 'Footer'
 
 export default Card

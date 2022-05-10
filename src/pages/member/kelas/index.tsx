@@ -65,7 +65,7 @@ const MemberCourse: NextPage = () => {
           {courses
             .filter(({ status }) => status == state.status)
             .map((course) => (
-              <div className="w-full hover:bg-gray-50 transition-colors md:flex items-center justify-between p-4">
+              <div key={course.id} className="w-full hover:bg-gray-50 transition-colors md:flex items-center justify-between p-4">
                 <Link to="/member/kelas/KL-123">
                   <div className="flex items-center h-full w-full">
                     <div className="w-16 h-16 bg-gray-200 flex-shrink-0 rounded-md"></div>
