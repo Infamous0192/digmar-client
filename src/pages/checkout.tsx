@@ -1,4 +1,4 @@
-import { Button } from 'components/elements'
+import { Button, Link } from 'components/elements'
 import { TextField } from 'components/forms'
 import { LandingLayout } from 'layouts/landing'
 
@@ -50,9 +50,11 @@ const CheckoutPage: React.FC = () => {
                   <TextField type="text" name="nama" value="infamous0192@gmail.com" readOnly />
                   <p className="text-sm">Invoice dan informasi kelas akan dikirim via Email</p>
                 </div>
-                <Button color="secondary" className="w-full mb-4">
-                  Selanjutnya
-                </Button>
+                <Link to="/member/transaksi/12345">
+                  <Button color="secondary" className="w-full mb-4">
+                    Selanjutnya
+                  </Button>
+                </Link>
                 <p className="font-light text-sm text-gray-700 px-2 text-center italic leading-snug">
                   By checking out you agree with our Terms of Service
                 </p>

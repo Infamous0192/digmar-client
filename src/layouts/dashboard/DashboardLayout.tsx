@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { SidebarContext, defaultState } from 'contexts/sidebar'
 import { Navigation } from 'types'
@@ -40,13 +40,13 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
     setOpen(!open)
   }
 
-  // useEffect(() => {
-  //   if (state.isLoaded && !state.isAuthenticated) {
-  //     router.push('/masuk')
-  //   }
-  // }, [state])
+  useEffect(() => {
+    if (state.isLoaded && !state.isAuthenticated) {
+      router.push('/masuk')
+    }
+  }, [state])
 
-  // if (!state.isLoaded || !state.isAuthenticated) return null
+  if (!state.isLoaded || !state.isAuthenticated) return null
 
   return (
     <SidebarContext.Provider value={{ open, toggleOpen, setOpen }}>

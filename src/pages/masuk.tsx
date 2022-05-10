@@ -15,27 +15,27 @@ const LoginPage: NextPage = () => {
 
   const handleSubmit = useSubmit(async () => {
     try {
-      // const { data: token } = await axios.post('/login', values)
-      // const res = await axios.get('/me', {
-      //   headers: {
-      //     Authorization: `bearer ${token}`,
-      //   },
-      // })
-
-      dispatch({
-        type: 'LOGIN',
-        payload: {
-          creds: { id_user: '123', username: 'Dwa Meizadewa', email: 'infamous0192@gmail.com' },
-          token: 'asdqwe123',
+      const { data: token } = await axios.post('/login', values)
+      const res = await axios.get('/me', {
+        headers: {
+          Authorization: `bearer ${token}`,
         },
       })
+
       // dispatch({
       //   type: 'LOGIN',
       //   payload: {
-      //     creds: { ...res.data, email: 'infamous0192@gmail.com' },
-      //     token,
+      //     creds: { id_user: '123', username: 'Dwa Meizadewa', email: 'infamous0192@gmail.com' },
+      //     token: 'asdqwe123',
       //   },
       // })
+      dispatch({
+        type: 'LOGIN',
+        payload: {
+          creds: { ...res.data, email: 'infamous0192@gmail.com' },
+          token,
+        },
+      })
 
       if (sessionStorage.getItem('order')) {
         router.push('/checkout')
