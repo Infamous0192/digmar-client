@@ -26,22 +26,20 @@ export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState)
 
   useEffect(() => {
-    dispatch({ type: 'LOGOUT' })
-    // const refresh = async (token: string) => {
-    //   try {
-    //     const res = await axios.get('/auth/verify', {
-    //       headers: { Authorization: `Bearer ${token}` },
-    //     })
-    //     const { data } = res.data
-    //     dispatch({ type: 'LOGIN', payload: { token, creds: data.creds } })
-    //   } catch (error) {
-    //     dispatch({ type: 'LOGOUT' })
-    //   }
-    // }
-    // const token = sessionStorage.getItem('token')
+    const refresh = async (token: string) => {
+      try {
+        const res = await axios.get('/me', {
+          headers: { Authorization: `bearer ${token}` },
+        })
+        dispatch({ type: 'LOGIN', payload: { token, creds: res.data } })
+      } catch (error) {
+        dispatch({ type: 'LOGOUT' })
+      }
+    }
+    const token = sessionStorage.getItem('token')
 
-    // if (token) refresh(token!)
-    // else dispatch({ type: 'LOGOUT' })
+    if (token) refresh(token!)
+    else dispatch({ type: 'LOGOUT' })
   }, [])
 
   return <AuthContext.Provider value={{ state, dispatch }}>{children}</AuthContext.Provider>

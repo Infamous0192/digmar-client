@@ -11,7 +11,7 @@ const TransactionDetail: NextPage = () => {
     <DashboardLayout>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-slate-800 leading-none">Order #12345</h1>
-        <div className="text-slate-600">
+        <div className="text-slate-600 text-right">
           Dibuat <span className="font-semibold text-slate-900">24 Mei 2022</span>
         </div>
       </div>
@@ -49,7 +49,7 @@ const TransactionDetail: NextPage = () => {
               <div className="grid sm:grid-cols-2 mb-4">
                 <div className="mb-2">
                   <div className="w-32 h-12">
-                    <Image alt="Logo BNI" src="/logo bni.png" width={645} height={240} />
+                  <Image alt="Logo BNI" src="/logo bni.png" width={129} height={48} />
                   </div>
                   <div className="font-medium">CV Tarkiz Paz Banua</div>
                   <div className="font-semibold">01291247964</div>
