@@ -44,7 +44,7 @@ const Events: React.FC = () => {
           }}
           slidesPerView="auto"
         >
-          <SwiperSlide style={{ maxWidth: '28rem' }}>
+          <SwiperSlide style={{ maxWidth: '24rem' }}>
             <div className="w-full bg-white rounded-md border border-gray-200 shadow-md">
               <div className="relative bg-gray-200 w-full aspect-video rounded rounded-b-none overflow-hidden">
                 <img
@@ -65,7 +65,7 @@ const Events: React.FC = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{ maxWidth: '28rem' }}>
+          <SwiperSlide style={{ maxWidth: '24rem' }}>
             <div className="w-full bg-white rounded-md border border-gray-200 shadow-md">
               <div className="relative bg-gray-200 w-full aspect-video rounded rounded-b-none overflow-hidden">
                 <img
@@ -86,7 +86,7 @@ const Events: React.FC = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{ maxWidth: '28rem' }}>
+          <SwiperSlide style={{ maxWidth: '24rem' }}>
             <div className="w-full bg-white rounded-md border border-gray-200 shadow-md">
               <div className="relative bg-gray-200 w-full aspect-video rounded rounded-b-none overflow-hidden">
                 <img
