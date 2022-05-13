@@ -11,14 +11,14 @@ interface Props extends React.SelectHTMLAttributes<HTMLSelectElement> {
 const Select: React.FC<Props> & Element = (props) => {
   return (
     <>
-      <label htmlFor={props.name} className="block text-sm font-medium text-gray-800 mb-1">
+      <label htmlFor={props.name} className="block text-sm font-medium text-slate-800 mb-1">
         {props.label}
       </label>
       <select
         {...props}
         id={props.name}
         className={`focus:ring-sunglow-300 focus:border-sunglow-300 block w-full text-sm px-3 leading-none py-2 shadow-sm ${
-          props.error ? 'border-red-500' : 'border-gray-300'
+          props.error ? 'border-red-500' : 'border-slate-300'
         } rounded-md`}
       >
         {props.children}

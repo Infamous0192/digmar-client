@@ -35,10 +35,10 @@ const CourseList: React.FC = () => {
       <div className="flex items-center justify-center flex-wrap gap-4 mb-8">
         {loading ? (
           <>
-            <div className="w-28 h-8 rounded-full bg-gray-200 animate-pulse"></div>
-            <div className="w-28 h-8 rounded-full bg-gray-200 animate-pulse"></div>
-            <div className="w-28 h-8 rounded-full bg-gray-200 animate-pulse"></div>
-            <div className="w-28 h-8 rounded-full bg-gray-200 animate-pulse"></div>
+            <div className="w-28 h-8 rounded-full bg-slate-200 animate-pulse"></div>
+            <div className="w-28 h-8 rounded-full bg-slate-200 animate-pulse"></div>
+            <div className="w-28 h-8 rounded-full bg-slate-200 animate-pulse"></div>
+            <div className="w-28 h-8 rounded-full bg-slate-200 animate-pulse"></div>
           </>
         ) : (
           <>

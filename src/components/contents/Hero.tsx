@@ -2,7 +2,7 @@ import { Button } from 'components/elements'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gray-50">
+    <section className="relative bg-slate-50">
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none"
         aria-hidden="true"
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             </h1>
             <div className="max-w-xl">
               <p
-                className="text-lg md:text-xl text-gray-600 mb-8"
+                className="text-lg md:text-xl text-slate-600 mb-8"
                 data-aos="zoom-y-out"
                 data-aos-delay="150"
               >

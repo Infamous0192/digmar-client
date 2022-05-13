@@ -22,17 +22,10 @@ const LoginPage: NextPage = () => {
         },
       })
 
-      // dispatch({
-      //   type: 'LOGIN',
-      //   payload: {
-      //     creds: { id_user: '123', username: 'Dwa Meizadewa', email: 'infamous0192@gmail.com' },
-      //     token: 'asdqwe123',
-      //   },
-      // })
       dispatch({
         type: 'LOGIN',
         payload: {
-          creds: { ...res.data, email: 'infamous0192@gmail.com' },
+          creds: { ...res.data },
           token,
         },
       })
@@ -77,16 +70,14 @@ const LoginPage: NextPage = () => {
             />
           </div>
           <div className="flex items-center justify-between py-3">
-            <a className="text-gray-800 underline text-sm" href="#">
+            <a className="text-slate-800 underline text-sm" href="#">
               Lupa password?
             </a>
-            <Button className="text-sm">
-              Masuk
-            </Button>
+            <Button className="text-sm">Masuk</Button>
           </div>
         </form>
-        <div className="border-t border-gray-200 mt-4">
-          <div className="py-4 text-gray-700 text-sm">
+        <div className="border-t border-slate-200 mt-4">
+          <div className="py-4 text-slate-700 text-sm">
             Belum punya akun?{' '}
             <Link to="/daftar" className="text-sunglow-600 hover:text-sunglow-500">
               Daftar

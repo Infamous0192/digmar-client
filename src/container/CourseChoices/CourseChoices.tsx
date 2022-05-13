@@ -28,10 +28,10 @@ const CourseChoices: React.FC = () => {
         </SwiperSlide>
       ))}
       <div className="flex items-center justify-end space-x-4 mt-4">
-        <button className="prev left-2 z-10 bottom-24 bg-white border-2 border-gray-900 text-primary rounded-full w-10 h-10 flex items-center justify-center">
+        <button className="prev left-2 z-10 bottom-24 bg-white border-2 border-slate-900 text-primary rounded-full w-10 h-10 flex items-center justify-center">
           <ArrowLeftIcon className="w-6 h-6" />
         </button>
-        <button className="next right-2 z-10 bottom-24 bg-white border-2 border-gray-900 text-primary rounded-full w-10 h-10 flex items-center justify-center">
+        <button className="next right-2 z-10 bottom-24 bg-white border-2 border-slate-900 text-primary rounded-full w-10 h-10 flex items-center justify-center">
           <ArrowRightIcon className="w-6 h-6" />
         </button>
       </div>

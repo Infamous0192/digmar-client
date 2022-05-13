@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h2 className="h2 mb-4">Telah Dipercaya Oleh</h2>
-            <p className="md:text-lg text-gray-600" data-aos="zoom-y-out">
+            <p className="md:text-lg text-slate-600" data-aos="zoom-y-out">
               Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis blandit
               libero cursus mattis.
             </p>
@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
-                className="max-w-full fill-current text-gray-400"
+                className="max-w-full fill-current text-slate-400"
                 width="124"
                 height="24"
                 viewBox="0 0 124 24"
@@ -50,7 +50,7 @@ const Testimonials: React.FC = () => {
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
-                className="max-w-full fill-current text-gray-400"
+                className="max-w-full fill-current text-slate-400"
                 width="83"
                 height="30"
                 viewBox="0 0 83 30"
@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
-                className="max-w-full fill-current text-gray-400"
+                className="max-w-full fill-current text-slate-400"
                 width="125"
                 height="39"
                 viewBox="0 0 125 39"
@@ -76,7 +76,7 @@ const Testimonials: React.FC = () => {
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
               <svg
-                className="max-w-full fill-current text-gray-400"
+                className="max-w-full fill-current text-slate-400"
                 width="113"
                 height="30"
                 viewBox="0 0 113 30"
@@ -89,7 +89,7 @@ const Testimonials: React.FC = () => {
             {/* Item */}
             <div className="flex items-center justify-center py-2 col-span-2 md:col-auto col-start-2 col-end-4">
               <svg
-                className="max-w-full fill-current text-gray-400"
+                className="max-w-full fill-current text-slate-400"
                 width="109"
                 height="33"
                 viewBox="0 0 109 33"
@@ -102,7 +102,7 @@ const Testimonials: React.FC = () => {
 
           {/* Testimonials */}
           <div className="max-w-3xl mx-auto mt-20" data-aos="zoom-y-out">
-            <div className="relative flex items-start border-2 border-gray-200 rounded bg-white">
+            <div className="relative flex items-start border-2 border-slate-200 rounded bg-white">
               {/* Testimonial */}
               <div className="text-center px-12 py-8 pt-20 mx-4 md:mx-0">
                 <div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">
@@ -120,7 +120,7 @@ const Testimonials: React.FC = () => {
                   aliquam, omnis dolore est.“
                 </blockquote>
                 <cite className="block font-bold text-lg not-italic mb-1">Dwa Meizadewa</cite>
-                <div className="text-gray-600">
+                <div className="text-slate-600">
                   <span>CEO & Co-Founder</span>{' '}
                   <a className="text-sunglow-600 hover:underline" href="#0">
                     @Pesbuk

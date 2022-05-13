@@ -36,7 +36,7 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
         </div>
         {children}
       </div>
-      <div className="bg-gray-200 h-screen w-full hidden lg:block relative">
+      <div className="bg-slate-200 h-screen w-full hidden lg:block relative">
         <img
           src="https://images.unsplash.com/photo-1640622303392-7d2bee0c2438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt=""

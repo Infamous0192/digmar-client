@@ -19,15 +19,15 @@ const Features: React.FC = () => {
 
   return (
     <section className="relative bg-white">
-      {/* <div className="absolute inset-0 bg-gray-50 pointer-events-none mb-16" aria-hidden="true"></div> */}
-      {/* <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div> */}
+      {/* <div className="absolute inset-0 bg-slate-50 pointer-events-none mb-16" aria-hidden="true"></div> */}
+      {/* <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-slate-200 transform -translate-y-1/2"></div> */}
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="pt-12 md:pt-20 pb-12 md:pb-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Kenapa Memilih Kami</h1>
-            <p className="md:text-xl text-gray-600">
+            <p className="md:text-xl text-slate-600">
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur excepteur sint occaecat cupidatat.
             </p>
@@ -45,8 +45,8 @@ const Features: React.FC = () => {
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 1
-                      ? 'bg-white shadow-md border-gray-200 hover:shadow-lg'
-                      : 'bg-gray-200 border-transparent'
+                      ? 'bg-white shadow-md border-slate-200 hover:shadow-lg'
+                      : 'bg-slate-200 border-transparent'
                   }`}
                   href="#0"
                   onClick={(e) => {
@@ -58,7 +58,7 @@ const Features: React.FC = () => {
                     <div className="font-bold leading-snug tracking-tight mb-1">
                       Building the Simple ecosystem
                     </div>
-                    <div className="text-sm md:text-base text-gray-600">
+                    <div className="text-sm md:text-base text-slate-600">
                       Take collaboration to the next level with security and administrative features
                       built for teams.
                     </div>
@@ -76,8 +76,8 @@ const Features: React.FC = () => {
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 2
-                      ? 'bg-white shadow-md border-gray-200 hover:shadow-lg'
-                      : 'bg-gray-200 border-transparent'
+                      ? 'bg-white shadow-md border-slate-200 hover:shadow-lg'
+                      : 'bg-slate-200 border-transparent'
                   }`}
                   href="#0"
                   onClick={(e) => {
@@ -89,7 +89,7 @@ const Features: React.FC = () => {
                     <div className="font-bold leading-snug tracking-tight mb-1">
                       Building the Simple ecosystem
                     </div>
-                    <div className="text-sm md:text-base text-gray-600">
+                    <div className="text-sm md:text-base text-slate-600">
                       Take collaboration to the next level with security and administrative features
                       built for teams.
                     </div>
@@ -110,8 +110,8 @@ const Features: React.FC = () => {
                 <a
                   className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
                     tab !== 3
-                      ? 'bg-white shadow-md border-gray-200 hover:shadow-lg'
-                      : 'bg-gray-200 border-transparent'
+                      ? 'bg-white shadow-md border-slate-200 hover:shadow-lg'
+                      : 'bg-slate-200 border-transparent'
                   }`}
                   href="#0"
                   onClick={(e) => {
@@ -123,7 +123,7 @@ const Features: React.FC = () => {
                     <div className="font-bold leading-snug tracking-tight mb-1">
                       Building the Simple ecosystem
                     </div>
-                    <div className="text-sm md:text-base text-gray-600">
+                    <div className="text-sm md:text-base text-slate-600">
                       Take collaboration to the next level with security and administrative features
                       built for teams.
                     </div>

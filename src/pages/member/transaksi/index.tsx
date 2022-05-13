@@ -60,12 +60,12 @@ const Transaction: NextPage = () => {
         <div className="max-w-xs mt-4 md:mt-0">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <SearchIcon className="w-4 h-4 text-gray-700" />
+              <SearchIcon className="w-4 h-4 text-slate-700" />
             </div>
             <input
               type="text"
               placeholder="Cari transaksi"
-              className="focus:ring-sunglow-300 focus:border-sunglow-300 block w-full pl-9 pr-12 sm:text-sm leading-none border-gray-300 rounded-md"
+              className="focus:ring-sunglow-300 focus:border-sunglow-300 block w-full pl-9 pr-12 sm:text-sm leading-none border-slate-300 rounded-md"
             />
           </div>
         </div>
@@ -108,7 +108,7 @@ const Transaction: NextPage = () => {
       <Card>
         <Card.Header>
           <h2>
-            Transaksi <span className="text-gray-400">{transactions.length}</span>
+            Transaksi <span className="text-slate-400">{transactions.length}</span>
           </h2>
         </Card.Header>
         <Table>

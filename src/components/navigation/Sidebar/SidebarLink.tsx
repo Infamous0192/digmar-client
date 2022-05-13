@@ -12,11 +12,11 @@ export const SidebarLink: React.FC<Props> = (props) => {
     <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${props.active && 'bg-sunglow-50'}`}>
       <Link
         to={props.to}
-        className="block text-gray-900 hover:text-sunglow-800 truncate transition duration-150"
+        className="block text-slate-900 hover:text-sunglow-800 truncate transition duration-150"
       >
         <div className="flex items-center">
           <props.icon
-            className={`shrink-0 h-6 w-6 ${props.active ? 'text-sunglow-500' : 'text-gray-700'}`}
+            className={`shrink-0 h-6 w-6 ${props.active ? 'text-sunglow-500' : 'text-slate-700'}`}
           />
           <span className="text-sm font-medium ml-3 duration-200">
             {props.title}

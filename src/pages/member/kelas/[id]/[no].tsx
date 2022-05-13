@@ -23,7 +23,7 @@ const TestPage: NextPage = () => {
       <div
         id="sidebar"
         // ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-80 shrink-0 bg-white border-r border-gray-200 p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-80 shrink-0 bg-white border-r border-slate-200 p-4 transition-all duration-200 ease-in-out ${
           open ? 'translate-x-0' : '-translate-x-80'
         }`}
       >
@@ -60,27 +60,27 @@ const TestPage: NextPage = () => {
         </div>
 
         <ul className="space-y-1">
-          <li className="px-4 bg-gray-100 rounded flex py-2 cursor-pointer">
+          <li className="px-4 bg-slate-100 rounded flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
               <CheckCircleIcon className="text-green-600" />
             </div>
             <h3 className="font-medium ml-2">Introduction</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
               <BookmarkIcon className="text-orange-500" />
             </div>
             <h3 className="font-medium ml-2">Basic Fundamental</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
-              <div className="border-[2.5px] border-gray-400 w-5 h-5 rounded-full"></div>
+              <div className="border-[2.5px] border-slate-400 w-5 h-5 rounded-full"></div>
             </div>
             <h3 className="font-medium ml-2">Environtment Setup</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
-              <div className="border-[2.5px] border-gray-400 w-5 h-5 rounded-full"></div>
+              <div className="border-[2.5px] border-slate-400 w-5 h-5 rounded-full"></div>
             </div>
             <h3 className="font-medium ml-2">Studi Case & Implementation</h3>
           </li>
@@ -111,7 +111,7 @@ const TestPage: NextPage = () => {
                 </button>
               </div>
               <Link to="/member">
-                <div className="font-semibold items-center text-gray-900 hidden lg:flex hover:text-gray-600">
+                <div className="font-semibold items-center text-slate-900 hidden lg:flex hover:text-slate-600">
                   <ChevronLeftIcon className="w-5 h-5 inline mr-1" /> Dashboard
                 </div>
               </Link>
@@ -122,7 +122,7 @@ const TestPage: NextPage = () => {
                 <button
                   id="theme-toggle"
                   type="button"
-                  className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+                  className="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 rounded-lg text-sm p-2.5"
                 >
                   <svg
                     id="theme-toggle-dark-icon"
@@ -154,7 +154,7 @@ const TestPage: NextPage = () => {
           </div>
         </header>
         <main className="px-6 sm:px-12 lg:px-12 py-8 w-full max-w-7xl mx-auto">
-          <div className="w-full aspect-video bg-gray-200 rounded-md overflow-hidden mb-4">
+          <div className="w-full aspect-video bg-slate-200 rounded-md overflow-hidden mb-4">
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/-uleG_Vecis?autoplay=1"

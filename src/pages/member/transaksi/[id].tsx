@@ -11,8 +11,8 @@ const TransactionDetail: NextPage = () => {
     <DashboardLayout>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-slate-800 leading-none">Order #12345</h1>
-        <div className="text-gray-600">
-          Dibuat <span className="font-semibold text-gray-900">24 Mei 2022</span>
+        <div className="text-slate-600">
+          Dibuat <span className="font-semibold text-slate-900">24 Mei 2022</span>
         </div>
       </div>
       <div className="grid md:grid-cols-12 gap-8">
@@ -20,9 +20,9 @@ const TransactionDetail: NextPage = () => {
           <Card className="mb-8">
             <Card.Body className="px-5 py-4 md:flex gap-x-4">
               <div className="flex gap-x-4">
-                <div className="w-16 h-16 md:w-24 md:h-24 bg-gray-200 rounded-md flex-shrink-0"></div>
+                <div className="w-16 h-16 md:w-24 md:h-24 bg-slate-200 rounded-md flex-shrink-0"></div>
                 <div>
-                  <p className="text-gray-400 font-thin text-sm">KL-123</p>
+                  <p className="text-slate-400 font-thin text-sm">KL-123</p>
                   <h2 className="font-semibold text-lg">Kelas Digital Marketing</h2>
                   <p className="font-medium mb-2 text-sunglow-500">Rp. 100.000</p>
                 </div>
@@ -31,10 +31,10 @@ const TransactionDetail: NextPage = () => {
             <Card.Footer>
               <div className="">
                 <div className="text-center font-medium mb-2 text-sm">Menunggu Pembayaran</div>
-                <div className="bg-gray-200 w-full h-2 rounded-md overflow-hidden">
+                <div className="bg-slate-200 w-full h-2 rounded-md overflow-hidden">
                   <div className="w-2/4 h-full bg-sunglow-500"></div>
                 </div>
-                <div className="flex items-center justify-between font-medium text-gray-600 mt-3">
+                <div className="flex items-center justify-between font-medium text-slate-600 mt-3">
                   <ShoppingCartIcon className="w-5 h-5 text-sunglow-500" />
                   <CashIcon className="w-5 h-5 text-sunglow-500" />
                   <ArchiveIcon className="w-5 h-5" />
@@ -89,7 +89,7 @@ const TransactionDetail: NextPage = () => {
                   <TextField type="text" name="nama" value="infamous0192@gmail.com" readOnly />
                 </div>
               </div>
-              <div className="border-t border-gray-200 py-3">
+              <div className="border-t border-slate-200 py-3">
                 <h2 className="text-lg font-semibold mb-2">Payment Details</h2>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex-grow-1">Harga Produk</div>

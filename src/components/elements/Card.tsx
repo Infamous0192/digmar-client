@@ -12,7 +12,7 @@ const Card: React.FC<Props> & Element = ({ children, className, ...props }) => {
   return (
     <div
       {...props}
-      className={`flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded border border-gray-200 ${className}`}
+      className={`flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white shadow-lg rounded border border-slate-200 ${className}`}
     >
       {children}
     </div>
@@ -20,7 +20,7 @@ const Card: React.FC<Props> & Element = ({ children, className, ...props }) => {
 }
 
 Card.Header = ({ children, ...props }) => (
-  <header className="px-5 py-4 border-b border-gray-200 font-semibold text-gray-800" {...props}>
+  <header className="px-5 py-4 border-b border-slate-200 font-semibold text-slate-800" {...props}>
     {children}
   </header>
 )
@@ -34,7 +34,7 @@ Card.Body = ({ className, children, ...props }) => (
 Card.Body.displayName = 'Body'
 
 Card.Footer = ({ children }) => (
-  <footer className="px-5 py-4 border-t border-gray-200">{children}</footer>
+  <footer className="px-5 py-4 border-t border-slate-200">{children}</footer>
 )
 Card.Footer.displayName = 'Footer'
 

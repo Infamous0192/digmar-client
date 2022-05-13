@@ -46,7 +46,7 @@ const UserMenu: React.FC = () => {
           </div>
           <Menu.Item
             as="button"
-            className="font-medium hover:bg-gray-50 w-full text-sm text-red-500 hover:text-red-600 flex items-center py-1 px-3"
+            className="font-medium hover:bg-slate-50 w-full text-sm text-red-500 hover:text-red-600 flex items-center py-1 px-3"
             onClick={handleLogout}
           >
             <LogoutIcon className="w-5 h-5 inline" />

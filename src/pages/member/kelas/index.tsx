@@ -61,17 +61,17 @@ const MemberCourse: NextPage = () => {
         </Button>
       </div>
       <Card>
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-slate-200">
           {courses
             .filter(({ status }) => status == state.status)
             .map((course) => (
-              <div key={course.id} className="w-full hover:bg-gray-50 transition-colors md:flex items-center justify-between p-4">
+              <div key={course.id} className="w-full hover:bg-slate-50 transition-colors md:flex items-center justify-between p-4">
                 <Link to="/member/kelas/KL-123">
                   <div className="flex items-center h-full w-full">
-                    <div className="w-16 h-16 bg-gray-200 flex-shrink-0 rounded-md"></div>
+                    <div className="w-16 h-16 bg-slate-200 flex-shrink-0 rounded-md"></div>
                     <div className="ml-4">
                       <h2 className="text-lg font-semibold capitalize">{course.name}</h2>
-                      <div className="text-gray-600 capitalize">{course.category}</div>
+                      <div className="text-slate-600 capitalize">{course.category}</div>
                     </div>
                   </div>
                 </Link>

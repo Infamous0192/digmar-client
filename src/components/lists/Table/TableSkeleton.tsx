@@ -11,7 +11,7 @@ const renderSkeleton = ({ row, col }: Props) => {
     for (let j = 0; j < col; j++) {
       skeleton.push(
         <td key={`${i}${j}`} className="w-min m-2 px-4 py-2">
-          <div className="w-full bg-gray-200 h-5 animate-pulse rounded"></div>
+          <div className="w-full bg-slate-200 h-5 animate-pulse rounded"></div>
         </td>
       )
     }

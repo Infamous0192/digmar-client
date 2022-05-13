@@ -9,9 +9,9 @@ const Checkbox: React.FC<Props> = ({ children, ...props }) => {
         {...props}
         id={props.name}
         type="checkbox"
-        className="h-4 w-4 text-sunglow-600 focus:ring-0 border-gray-300 rounded"
+        className="h-4 w-4 text-sunglow-600 focus:ring-0 border-slate-300 rounded"
       />
-      <label htmlFor={props.name} className="pl-3 block text-sm text-gray-700 capitalize">
+      <label htmlFor={props.name} className="pl-3 block text-sm text-slate-700 capitalize">
         {children}
       </label>
     </div>

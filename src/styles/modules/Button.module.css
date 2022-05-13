@@ -7,11 +7,11 @@
 }
 
 .secondary {
-  @apply text-white bg-gray-900 hover:bg-gray-800;
+  @apply text-white bg-slate-900 hover:bg-slate-800;
 }
 
 .light {
-  @apply text-slate-600 bg-white border border-gray-200 hover:border-gray-300;
+  @apply text-slate-600 bg-white border border-slate-200 hover:border-slate-300;
 }
 
 .round-sm {

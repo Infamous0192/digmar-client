@@ -11,8 +11,8 @@ const CheckoutPage: React.FC = () => {
             <div className="md:col-span-8">
               <div className="bg-white rounded-lg shadow p-5">
                 <h1 className="text-lg font-semibold mb-4">Detail Transaksi</h1>
-                <div className="border border-gray-200 rounded-md flex overflow-hidden">
-                  <div className="w-24 h-24 bg-gray-200 flex-shrink-0"></div>
+                <div className="border border-slate-200 rounded-md flex overflow-hidden">
+                  <div className="w-24 h-24 bg-slate-200 flex-shrink-0"></div>
                   <div className="p-4">
                     <div className="font-medium">Kelas Digital Marketing</div>
                     <div className="text-sunglow-600 font-semibold">Rp. 100.000</div>
@@ -55,7 +55,7 @@ const CheckoutPage: React.FC = () => {
                     Selanjutnya
                   </Button>
                 </Link>
-                <p className="font-light text-sm text-gray-700 px-2 text-center italic leading-snug">
+                <p className="font-light text-sm text-slate-700 px-2 text-center italic leading-snug">
                   By checking out you agree with our Terms of Service
                 </p>
               </div>

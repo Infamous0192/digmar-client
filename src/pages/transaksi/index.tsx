@@ -24,7 +24,7 @@ const Transaction: NextPage = () => {
             </Button>
           </div>
           <ul className="space-y-4">
-            <li className="w-full bg-white border border-gray-200 rounded-md p-4">
+            <li className="w-full bg-white border border-slate-200 rounded-md p-4">
               <div className="flex items-center text-sm mb-3">
                 <Badge color="green" className="text-xs">
                   Selesai
@@ -33,7 +33,7 @@ const Transaction: NextPage = () => {
               </div>
               <div className="grid grid-cols-12 md:gap-x-8">
                 <div className="flex col-span-12 md:col-span-10 mb-4">
-                  <div className="w-16 h-16 flex-shrink-0 bg-gray-200 animate-pulse rounded overflow-hidden"></div>
+                  <div className="w-16 h-16 flex-shrink-0 bg-slate-200 animate-pulse rounded overflow-hidden"></div>
                   <div className="ml-4">
                     <h2 className="text-lg sm:text-xl font-bold leading-none mb-1">
                       Javascript Fullstack Developer
@@ -57,7 +57,7 @@ const Transaction: NextPage = () => {
                 </div>
               </div>
             </li>
-            <li className="w-full bg-white border border-gray-200 rounded-md p-4">
+            <li className="w-full bg-white border border-slate-200 rounded-md p-4">
               <div className="flex items-center text-sm mb-3">
                 <Badge color="red" className="text-xs">
                   Belum Bayar
@@ -66,7 +66,7 @@ const Transaction: NextPage = () => {
               </div>
               <div className="grid grid-cols-12 md:gap-x-8">
                 <div className="flex col-span-12 md:col-span-10 mb-4">
-                  <div className="w-16 h-16 flex-shrink-0 bg-gray-200 animate-pulse rounded overflow-hidden"></div>
+                  <div className="w-16 h-16 flex-shrink-0 bg-slate-200 animate-pulse rounded overflow-hidden"></div>
                   <div className="ml-4">
                     <h2 className="text-lg sm:text-xl font-bold leading-none mb-1">
                       Javascript Fullstack Developer

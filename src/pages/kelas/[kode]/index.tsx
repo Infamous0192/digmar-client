@@ -39,7 +39,7 @@ const CourseDetail: NextPage = () => {
               </h1>
               <div className="my-4 sm:flex item-center justify-between">
                 <div className="flex items-center space-x-1.5 text-sm mt-2">
-                  <div className="w-8 h-8 border border-white bg-gray-200 rounded-full"></div>
+                  <div className="w-8 h-8 border border-white bg-slate-200 rounded-full"></div>
                   <span>CV Tarkiz Paz Banua</span>
                 </div>
 
@@ -48,7 +48,7 @@ const CourseDetail: NextPage = () => {
                   <StarIcon className="w-5 h-5 text-orange-500" />
                   <StarIcon className="w-5 h-5 text-orange-500" />
                   <StarIcon className="w-5 h-5 text-orange-500" />
-                  <StarIcon className="w-5 h-5 text-gray-300" />
+                  <StarIcon className="w-5 h-5 text-slate-300" />
                   <span className="text-orange-500 ml-2 text-sm leading-none">4.2</span>
                 </div>
               </div>
@@ -56,18 +56,18 @@ const CourseDetail: NextPage = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.
               </p>
-              <div className="w-full relative bg-gray-200 aspect-video rounded-md overflow-hidden my-6"></div>
+              <div className="w-full relative bg-slate-200 aspect-video rounded-md overflow-hidden my-6"></div>
               <article className="w-full">
-                <section className="border-b border-gray-200 pb-4 mb-4">
+                <section className="border-b border-slate-200 pb-4 mb-4">
                   <h2 className="text-xl font-bold mb-2">Tentang Kelas</h2>
-                  <p className="mb-2 leading-relaxed text-gray-700">
+                  <p className="mb-2 leading-relaxed text-slate-700">
                     There is so much happening in the AI space. Advances in the economic sectors
                     have seen automated business practices rapidly increasing economic value. While
                     the realm of the human sciences has used the power afforded by computational
                     capabilities to solve many human based dilemmas. Even the art scene has adopted
                     carefully selected ML applications to usher in the technological movement.
                   </p>
-                  <p className="mb-2 leading-relaxed text-gray-700">
+                  <p className="mb-2 leading-relaxed text-slate-700">
                     Join us every second Wednesday as we host an open discussion about the amazing
                     things happening in the world of AI and machine learning. Feel free to share
                     your experiences, ask questions, ponder the possibilities, or just listen as we
@@ -76,26 +76,26 @@ const CourseDetail: NextPage = () => {
                 </section>
                 <section className="pb-4 mb-4">
                   <h2 className="text-xl font-bold mb-2">Materi</h2>
-                  <div className="rounded-lg shadow-sm bg-white border border-gray-200 p-6 mb-4">
+                  <div className="rounded-lg shadow-sm bg-white border border-slate-200 p-6 mb-4">
                     <div className="">
                       <ul className="space-y-2">
                         <li className="flex items-center justify-between font-medium ">
                           <div className="flex items-center">
-                            <LockClosedIcon className="w-5 h-5 text-gray-300" />
+                            <LockClosedIcon className="w-5 h-5 text-slate-300" />
                             <span className="leading-none ml-4">Introduction</span>
                           </div>
                           <div>3 mins</div>
                         </li>
                         <li className="flex items-center justify-between font-medium ">
                           <div className="flex items-center">
-                            <LockClosedIcon className="w-5 h-5 text-gray-300" />
+                            <LockClosedIcon className="w-5 h-5 text-slate-300" />
                             <span className="leading-none ml-4">Tools & Requirement</span>
                           </div>
                           <div>3 mins</div>
                         </li>
                         <li className="flex items-center justify-between font-medium ">
                           <div className="flex items-center">
-                            <LockClosedIcon className="w-5 h-5 text-gray-300" />
+                            <LockClosedIcon className="w-5 h-5 text-slate-300" />
                             <span className="leading-none ml-4">Environment Setup</span>
                           </div>
                           <div>3 mins</div>
@@ -107,7 +107,7 @@ const CourseDetail: NextPage = () => {
               </article>
             </div>
             <div className="md:col-span-4">
-              <div className="bg-white border border-gray-200 w-full rounded shadow-sm p-5 md:p-8">
+              <div className="bg-white border border-slate-200 w-full rounded shadow-sm p-5 md:p-8">
                 <h2 className="font-bold text-sm mb-1">Benefit</h2>
                 <ul className="space-y-1 mb-2">
                   <li className="flex items-center space-x-1.5">
@@ -125,7 +125,7 @@ const CourseDetail: NextPage = () => {
                 </ul>
                 <div className="mb-4 mt-2">
                   <div className="text-sm font-medium">Biaya</div>
-                  <div className="text-3xl leading-none font-gray-600 font-extrabold">
+                  <div className="text-3xl leading-none font-slate-600 font-extrabold">
                     Rp. 100.000
                   </div>
                 </div>

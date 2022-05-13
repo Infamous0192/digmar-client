@@ -50,7 +50,7 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
 
   return (
     <SidebarContext.Provider value={{ open, toggleOpen, setOpen }}>
-      <div className="flex h-screen overflow-hidden bg-gray-50">
+      <div className="flex h-screen overflow-hidden bg-slate-50">
         <Sidebar navigation={navigation} />
         <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           <Header />

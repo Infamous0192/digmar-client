@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="font-medium text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm"
+                        className="font-medium text-slate-600 hover:text-slate-900 px-3 py-2 rounded-md text-sm"
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                     <>
                       <button
                         type="button"
-                        className="p-1 rounded-full text-gray-500 hover:text-gray-700"
+                        className="p-1 rounded-full text-slate-500 hover:text-slate-700"
                       >
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -108,10 +108,10 @@ const Navbar: React.FC = () => {
                                 <Link
                                   to="/member"
                                   className={`${
-                                    active && 'bg-gray-100'
-                                  } block px-4 py-2 text-sm text-gray-900`}
+                                    active && 'bg-slate-100'
+                                  } block px-4 py-2 text-sm text-slate-900`}
                                 >
-                                  Dashboard
+                                  Go to Dashboard
                                 </Link>
                               )}
                             </Menu.Item>
@@ -120,8 +120,8 @@ const Navbar: React.FC = () => {
                                 <Link
                                   to="/profile"
                                   className={`${
-                                    active && 'bg-gray-100'
-                                  } block px-4 py-2 text-sm text-gray-900`}
+                                    active && 'bg-slate-100'
+                                  } block px-4 py-2 text-sm text-slate-900`}
                                 >
                                   Settings
                                 </Link>
@@ -132,8 +132,8 @@ const Navbar: React.FC = () => {
                                 <button
                                   onClick={handleLogout}
                                   className={`${
-                                    active && 'bg-gray-100'
-                                  } block px-4 py-2 text-sm w-full text-left text-gray-900`}
+                                    active && 'bg-slate-100'
+                                  } block px-4 py-2 text-sm w-full text-left text-slate-900`}
                                 >
                                   Sign Out
                                 </button>
@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
                     <>
                       <Link
                         to="/masuk"
-                        className="whitespace-nowrap text-base font-medium text-gray-600 hover:text-gray-900"
+                        className="whitespace-nowrap text-base font-medium text-slate-600 hover:text-slate-900"
                       >
                         Masuk
                       </Link>
@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
               </div>
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                <Disclosure.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-slate-400 hover:text-slate-500 hover:bg-slate-100">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -190,14 +190,14 @@ const Navbar: React.FC = () => {
                     key={item.name}
                     as="a"
                     href={item.href}
-                    className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                    className="text-slate-600 text-sm hover:text-slate-900 hover:bg-slate-100 rounded block px-3 py-2"
                     aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
                   </Disclosure.Button>
                 ))}
               </div>
-              <div className="pt-4 pb-3 border-t border-gray-300">
+              <div className="pt-4 pb-3 border-t border-slate-300">
                 {!state.isAuthenticated ? (
                   <div className="px-5">
                     <Link to="/daftar">
@@ -205,7 +205,7 @@ const Navbar: React.FC = () => {
                         Daftar
                       </Button>
                     </Link>
-                    <p className="mt-4 text-center text-sm text-gray-500">
+                    <p className="mt-4 text-center text-sm text-slate-500">
                       Sudah terdaftar?{' '}
                       <Link to="/masuk" className="text-sunglow-600 hover:text-sunglow-500">
                         Masuk
@@ -225,12 +225,12 @@ const Navbar: React.FC = () => {
                         />
                       </div>
                       <div className="ml-3">
-                        <div className="font-medium text-gray-900">{state.creds?.username}</div>
-                        <div className="text-sm text-gray-600">{state.creds?.email}</div>
+                        <div className="font-medium text-slate-900">{state.creds?.username}</div>
+                        <div className="text-sm text-slate-600">{state.creds?.email}</div>
                       </div>
                       <button
                         type="button"
-                        className="ml-auto flex-shrink-0 p-1 rounded-full text-gray-600 hover:text-gray-900"
+                        className="ml-auto flex-shrink-0 p-1 rounded-full text-slate-600 hover:text-slate-900"
                       >
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -240,20 +240,20 @@ const Navbar: React.FC = () => {
                       <Disclosure.Button
                         as={Link}
                         to="/member"
-                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                        className="text-slate-600 text-sm hover:text-slate-900 hover:bg-slate-100 rounded block px-3 py-2"
                       >
                         Dashboard
                       </Disclosure.Button>
                       <Disclosure.Button
                         as={Link}
                         to="/profile"
-                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 rounded block px-3 py-2"
+                        className="text-slate-600 text-sm hover:text-slate-900 hover:bg-slate-100 rounded block px-3 py-2"
                       >
                         Settings
                       </Disclosure.Button>
                       <button
                         onClick={handleLogout}
-                        className="text-gray-600 text-sm hover:text-gray-900 hover:bg-gray-100 w-full text-left rounded block px-3 py-2"
+                        className="text-slate-600 text-sm hover:text-slate-900 hover:bg-slate-100 w-full text-left rounded block px-3 py-2"
                       >
                         Sign Out
                       </button>

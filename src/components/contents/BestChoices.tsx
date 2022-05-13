@@ -2,7 +2,7 @@ import { CourseChoices } from 'container/CourseChoices'
 
 const BestChoices: React.FC = () => {
   return (
-    <section className="relative bg-gray-50">
+    <section className="relative bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* CTA box */}
         <div

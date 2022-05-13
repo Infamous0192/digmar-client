@@ -8,8 +8,8 @@ const Notifications: React.FC = () => {
       {({ open }) => (
         <>
           <Menu.Button
-            className={`w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition duration-150 rounded-full ${
-              open && 'bg-gray-200'
+            className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 transition duration-150 rounded-full ${
+              open && 'bg-slate-200'
             }`}
             aria-haspopup="true"
             aria-expanded={open}

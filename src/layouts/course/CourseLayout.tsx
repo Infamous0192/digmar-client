@@ -17,7 +17,7 @@ const CourseLayout: React.FC = () => {
       <div
         id="sidebar"
         // ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-80 shrink-0 bg-white border-r border-gray-200 p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 transform h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-80 shrink-0 bg-white border-r border-slate-200 p-4 transition-all duration-200 ease-in-out ${
           true ? 'translate-x-0' : '-translate-x-64'
         }`}
       >
@@ -54,27 +54,27 @@ const CourseLayout: React.FC = () => {
         </div>
 
         <ul className="space-y-1">
-          <li className="px-4 bg-gray-100 rounded flex py-2 cursor-pointer">
+          <li className="px-4 bg-slate-100 rounded flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
               <CheckCircleIcon className="text-green-600" />
             </div>
             <h3 className="font-medium ml-2">Introduction</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
               <BookmarkIcon className="text-orange-500" />
             </div>
             <h3 className="font-medium ml-2">Basic Fundamental</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
-              <div className="border-[2.5px] border-gray-400 w-5 h-5 rounded-full"></div>
+              <div className="border-[2.5px] border-slate-400 w-5 h-5 rounded-full"></div>
             </div>
             <h3 className="font-medium ml-2">Environtment Setup</h3>
           </li>
-          <li className="px-4 hover:bg-gray-50 flex py-2 cursor-pointer">
+          <li className="px-4 hover:bg-slate-50 flex py-2 cursor-pointer">
             <div className="w-6 h-6 rounded-full flex-shrink-0">
-              <div className="border-[2.5px] border-gray-400 w-5 h-5 rounded-full"></div>
+              <div className="border-[2.5px] border-slate-400 w-5 h-5 rounded-full"></div>
             </div>
             <h3 className="font-medium ml-2">Studi Case & Implementation</h3>
           </li>
@@ -83,7 +83,7 @@ const CourseLayout: React.FC = () => {
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
         <Header />
         <main className="px-6 sm:px-12 lg:px-12 py-8 w-full max-w-7xl mx-auto">
-          <div className="w-full aspect-video bg-gray-200 rounded-md mb-4"></div>
+          <div className="w-full aspect-video bg-slate-200 rounded-md mb-4"></div>
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-semibold">Introduction</h1>
             <Button color="secondary">Next Video</Button>

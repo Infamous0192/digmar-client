@@ -3,7 +3,7 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="space-y-1">
-              <div className="flex items-center space-x-2 text-sm text-gray-800">
+              <div className="flex items-center space-x-2 text-sm text-slate-800">
                 <MailIcon className="w-4 h-4 inline" />
                 <span>mehmedjunaidi@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-800">
+              <div className="flex items-center space-x-2 text-sm text-slate-800">
                 <PhoneIcon className="w-4 h-4 inline" />
                 <span>+62 853 4568 3025</span>
               </div>
@@ -30,12 +30,12 @@ const Footer: React.FC = () => {
 
           {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-gray-800 font-medium mb-2">Kelas</h3>
+            <h3 className="text-slate-800 font-medium mb-2">Kelas</h3>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Pemasaran
                 </Link>
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Operasional
                 </Link>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Sumber Daya Manusia
                 </Link>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Keuangan
                 </Link>
@@ -69,12 +69,12 @@ const Footer: React.FC = () => {
 
           {/* 3rd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-gray-800 font-medium mb-2">Kelas</h3>
+            <h3 className="text-slate-800 font-medium mb-2">Kelas</h3>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Pemasaran
                 </Link>
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Operasional
                 </Link>
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Sumber Daya Manusia
                 </Link>
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Keuangan
                 </Link>
@@ -108,12 +108,12 @@ const Footer: React.FC = () => {
 
           {/* 4th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-gray-800 font-medium mb-2">Company</h3>
+            <h3 className="text-slate-800 font-medium mb-2">Company</h3>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Home
                 </Link>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   About us
                 </Link>
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Terms
                 </Link>
@@ -137,7 +137,7 @@ const Footer: React.FC = () => {
               <li className="mb-2">
                 <Link
                   to="#"
-                  className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
+                  className="text-slate-600 hover:text-slate-900 transition duration-150 ease-in-out"
                 >
                   Privacy Policy
                 </Link>
@@ -147,8 +147,8 @@ const Footer: React.FC = () => {
 
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-            <h3 className="text-gray-800 font-medium mb-2">Subscribe</h3>
-            <p className="text-sm text-gray-600 mb-4">
+            <h3 className="text-slate-800 font-medium mb-2">Subscribe</h3>
+            <p className="text-sm text-slate-600 mb-4">
               Get the latest news and articles to your inbox every month.
             </p>
             <form>
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
                     <input
                       id="newsletter"
                       type="email"
-                      className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm"
+                      className="form-input w-full text-slate-800 px-3 py-2 pr-12 text-sm"
                       placeholder="Your email"
                       required
                     />
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                       aria-label="Subscribe"
                     >
                       <span
-                        className="absolute inset-0 right-auto w-px -ml-px my-2 bg-gray-300"
+                        className="absolute inset-0 right-auto w-px -ml-px my-2 bg-slate-300"
                         aria-hidden="true"
                       ></span>
                       <svg
@@ -195,13 +195,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom area */}
-        <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
+        <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-slate-200">
           {/* Social links */}
           <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
             <li>
               <Link
                 to="#"
-                className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                className="flex justify-center items-center text-slate-600 hover:text-slate-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
                 aria-label="Twitter"
               >
                 <svg
@@ -216,7 +216,7 @@ const Footer: React.FC = () => {
             <li className="ml-4">
               <Link
                 to="#"
-                className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                className="flex justify-center items-center text-slate-600 hover:text-slate-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
                 aria-label="Facebook"
               >
                 <svg
@@ -230,7 +230,7 @@ const Footer: React.FC = () => {
             </li>
           </ul>
 
-          <div className="text-sm text-gray-600 mr-4">
+          <div className="text-sm text-slate-600 mr-4">
             Build by{' '}
             <a className="text-sunglow-600 hover:underline" href="https://t-paz.com/">
               Tarkiz Paz Banua
