@@ -1,6 +1,6 @@
 import { Link } from 'components/elements'
 import { Button } from 'components/elements'
-import { CourseList } from 'container/CourseList'
+import { ClassList } from 'container/ClassList'
 
 const Courses: React.FC = () => {
   return (
@@ -28,7 +28,7 @@ const Courses: React.FC = () => {
         <div className="py-12">
           <h2 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tighter mb-8 text-center">Kelas Unggulan</h2>
 
-          <CourseList />
+          <ClassList />
           <div className="mt-8 md:mt-12 flex items-center justify-end">
             <Link to="/kelas">
               <Button>Lihat semua</Button>

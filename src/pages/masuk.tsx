@@ -30,7 +30,7 @@ const LoginPage: NextPage = () => {
         },
       })
 
-      if (sessionStorage.getItem('order')) {
+      if (sessionStorage.getItem('cart')) {
         router.push('/checkout')
       } else {
         router.push('/member')

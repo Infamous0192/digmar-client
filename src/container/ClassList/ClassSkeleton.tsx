@@ -1,4 +1,4 @@
-const CourseSkeleton: React.FC = () => {
+const ClassSkeleton: React.FC = () => {
   return (
     <div className="w-full max-w-sm mx-auto bg-white rounded shadow border border-slate-200">
       <div className="block items-center">
@@ -21,4 +21,4 @@ const CourseSkeleton: React.FC = () => {
   )
 }
 
-export default CourseSkeleton
+export default ClassSkeleton

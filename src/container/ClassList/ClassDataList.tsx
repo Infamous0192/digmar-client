@@ -3,8 +3,8 @@ import { Checkbox } from 'components/forms'
 import { useFetch } from 'hooks'
 import { useEffect, useState } from 'react'
 import { Course } from 'types'
-import CourseItem from './CourseItem'
-import CourseSkeleton from './CourseSkeleton'
+import ClassItem from './ClassItem'
+import ClassSkeleton from './ClassSkeleton'
 
 const tingkatan = ['dasar', 'menengah', 'lanjut', 'ahli']
 
@@ -22,7 +22,9 @@ const CourseDataList: React.FC = () => {
   })
   const [course, setCourse] = useState<Course[]>([])
   const [category, setCategory] = useState<string[]>([])
-  const { data, loading } = useFetch({ url: '/Kelas/getAllKelas' })
+  const { data, loading } = useFetch({ url: '/classes/all' })
+
+  console.log(data)
 
   /* This hooks is used to initialize data */
   useEffect(() => {
@@ -143,22 +145,23 @@ const CourseDataList: React.FC = () => {
         </div>
         {loading ? (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-6">
-            <CourseSkeleton />
-            <CourseSkeleton />
-            <CourseSkeleton />
-            <CourseSkeleton />
-            <CourseSkeleton />
-            <CourseSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
           </div>
         ) : course.length ? (
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-6">
             {course.map((i) => (
-              <CourseItem
+              <ClassItem
                 key={i.id_kelas}
                 name={i.nama_kelas}
                 photo={i.photo}
                 price={parseInt(i.harga)}
                 slug={i.kode_kelas}
+                duration={parseInt(i.durasi.split(':')[0])}
               />
             ))}
           </div>

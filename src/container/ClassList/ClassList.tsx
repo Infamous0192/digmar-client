@@ -1,13 +1,13 @@
 import { useFetch } from 'hooks'
 import { useEffect, useState } from 'react'
-import CourseButton from './CourseButton'
-import CourseItem from './CourseItem'
-import CourseSkeleton from './CourseSkeleton'
+import ClassButton from './ClassButton'
+import ClassItem from './ClassItem'
+import ClassSkeleton from './ClassSkeleton'
 
-const CourseList: React.FC = () => {
+const ClassList: React.FC = () => {
   const [state, setState] = useState('')
   const [category, setCategory] = useState<string[]>([])
-  const { data, loading } = useFetch({ url: '/Kelas/getAllKelas' })
+  const { data, loading } = useFetch({ url: '/classes/all' })
 
   function handleClick(category: string): React.MouseEventHandler<HTMLButtonElement> {
     return () => {
@@ -43,7 +43,7 @@ const CourseList: React.FC = () => {
         ) : (
           <>
             {category.map((item) => (
-              <CourseButton key={item} category={item} active={state} onClick={handleClick(item)} />
+              <ClassButton key={item} category={item} active={state} onClick={handleClick(item)} />
             ))}
           </>
         )}
@@ -52,9 +52,9 @@ const CourseList: React.FC = () => {
       <div className="flex flex-wrap lg:flex-nowrap gap-x-6 gap-y-6">
         {loading ? (
           <>
-            <CourseSkeleton />
-            <CourseSkeleton />
-            <CourseSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
+            <ClassSkeleton />
           </>
         ) : (
           <>
@@ -62,12 +62,13 @@ const CourseList: React.FC = () => {
               .filter(({ nama_kategori }) => nama_kategori == state)
               .slice(0, 3)
               .map((i) => (
-                <CourseItem
+                <ClassItem
                   key={i.kode_kelas}
                   name={i.nama_kelas}
                   price={parseInt(i.harga)}
                   photo={i.photo}
                   slug={i.kode_kelas}
+                  duration={parseInt(i.durasi.split(':')[0])}
                 />
               ))}
           </>
@@ -77,4 +78,4 @@ const CourseList: React.FC = () => {
   )
 }
 
-export default CourseList
+export default ClassList

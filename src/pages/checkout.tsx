@@ -23,10 +23,6 @@ const CheckoutPage: React.FC = () => {
                     <div className="flex-grow-1">Kelas Digital Marketing</div>
                     <div className="font-bold flex-shrink-0">Rp. 100.000</div>
                   </div>
-                  <div className="flex items-center justify-between py-2">
-                    <div className="flex-grow-1">Taxes & Fees</div>
-                    <div className="font-bold flex-shrink-0">Rp. 10.000</div>
-                  </div>
                   <div className="flex items-center justify-between py-4 text-lg">
                     <div className="flex-grow-1 font-bold">Total</div>
                     <div className="font-bold flex-shrink-0">Rp. 110.000</div>
