@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                 <div className="flex-shrink-0 -pr-4 h-8">
                   <Image
                     src="/logo.png"
-                    width="64"
+                    width="64px"
                     height="32px"
                     objectFit="contain"
                     alt="logo siap cuan"

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'components/elements'
 import { useRouter } from 'next/router'
 import { useAuth } from 'modules/auth'
+import Image from 'next/image'
 
 interface Props {
   children: React.ReactNode
@@ -24,7 +25,13 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
       <div className="bg-white h-screen w-full flex items-center justify-center">
         <div className="absolute top-[16px] left-4">
           <Link to="/">
-            <img src="/logo.png" className="h-8" alt="Logo Siap Cuan" />
+            <Image
+              src="/logo.png"
+              width="64px"
+              height="32px"
+              objectFit="contain"
+              alt="logo siap cuan"
+            />
           </Link>
         </div>
         {children}
