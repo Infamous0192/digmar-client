@@ -1,6 +1,7 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
 import axios from 'lib/axios'
+import Cookies from 'js-cookie'
 
 import { LandingLayout } from 'layouts/landing'
 import { Button, Card, Link } from 'components/elements'
@@ -34,7 +35,15 @@ const CourseDetail: NextPage<Props> = ({ kelas, materi }) => {
 
   function registerCourse() {
     if (!state.isAuthenticated) {
-      sessionStorage.setItem('cart', kelas!.kode_kelas)
+      const cart = JSON.stringify([
+        {
+          kode: kelas!.kode_kelas,
+          jenis: 'kelas',
+        },
+      ])
+
+      sessionStorage.setItem('cart', cart)
+      Cookies.set('cart', cart)
       router.push('/masuk')
     } else {
       router.push('/checkout')
@@ -74,8 +83,8 @@ const CourseDetail: NextPage<Props> = ({ kelas, materi }) => {
             <h2 className="text-xl font-bold mb-2">Materi</h2>
             <Card className="p-5">
               <ul className="space-y-3">
-                {materi.map(({ judul_materi, durasi }) => (
-                  <li className="flex justify-between">
+                {materi.map(({ kode_materi, judul_materi }) => (
+                  <li key={kode_materi} className="flex justify-between">
                     <div className="flex">
                       <LockClosedIcon className="w-5 h-5 text-slate-300 flex-shrink-0" />
                       <span className="ml-4 font-medium text-sm capitalize">{judul_materi}</span>
@@ -132,7 +141,7 @@ const CourseDetail: NextPage<Props> = ({ kelas, materi }) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const res = await axios.get(`/classes/detail/${query.code}`)
+  const res = await axios.get(`/classes/detail/${query.kode}`)
 
   return {
     props: {

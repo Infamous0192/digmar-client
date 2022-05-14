@@ -17,3 +17,8 @@ export type Navigation = {
     href: string
   }[]
 }
+
+export type Cart = {
+  kode: string
+  jenis: string
+}

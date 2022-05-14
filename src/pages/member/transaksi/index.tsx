@@ -6,7 +6,15 @@ import { Select } from 'components/forms'
 import { SearchIcon } from '@heroicons/react/solid'
 import { useState } from 'react'
 
-const transactions = [
+const awe = {
+  invoice: '12345',
+  name: 'Kelas Digital Merketing',
+  category: 'kelas',
+  date: '24 Mei 2022',
+  status: 'belum bayar',
+}
+
+const transactions: typeof awe[] = [
   {
     invoice: '12345',
     name: 'Kelas Digital Merketing',
@@ -52,6 +60,10 @@ const Transaction: NextPage = () => {
   function handleCategory(e: React.ChangeEvent<HTMLSelectElement>) {
     setState({ ...state, category: e.target.value as typeof state.category })
   }
+
+  const data = transactions
+    .filter(({ status }) => state.status == 'all' || state.status == status)
+    .filter(({ category }) => state.category == 'all' || state.category == category)
 
   return (
     <DashboardLayout>
@@ -107,9 +119,7 @@ const Transaction: NextPage = () => {
       </div>
       <Card>
         <Card.Header>
-          <h2>
-            Transaksi <span className="text-slate-400">{transactions.length}</span>
-          </h2>
+          <h2>Transaksi</h2>
         </Card.Header>
         <Table>
           <Table.Head>
@@ -121,10 +131,15 @@ const Transaction: NextPage = () => {
             <Table.Header>Aksi</Table.Header>
           </Table.Head>
           <Table.Body>
-            {transactions
-              .filter(({ status }) => state.status == 'all' || state.status == status)
-              .filter(({ category }) => state.category == 'all' || state.category == category)
-              .map((transaction) => (
+            {!(data.length > 0) && (
+              <tr className="text-center">
+                <td colSpan={6} className="py-4">
+                  Belum ada data
+                </td>
+              </tr>
+            )}
+            {data.length > 0 &&
+              data.map((transaction) => (
                 <Table.Row key={transaction.invoice}>
                   <Table.Data className="text-sunglow-500">
                     <Link to="/member/transaksi/123">#{transaction.invoice}</Link>

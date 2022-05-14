@@ -13,10 +13,8 @@ const AuthLayout: React.FC<Props> = ({ children }) => {
   const router = useRouter()
 
   useEffect(() => {
-    if (state.isAuthenticated && router.isReady) router.push('/')
-  }, [router.isReady])
-
-  // return null
+    if (state.isAuthenticated && state.isLoaded && router.isReady) router.push('/')
+  }, [router.isReady, state.isLoaded])
 
   if (state.isAuthenticated || !state.isLoaded) return null
 

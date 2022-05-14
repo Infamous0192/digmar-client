@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
+import Cookies from 'js-cookie'
+import { Cart } from 'types'
 
 import axios from 'lib/axios'
 import { Button, Link } from 'components/elements'
@@ -30,11 +32,15 @@ const LoginPage: NextPage = () => {
         },
       })
 
-      if (sessionStorage.getItem('cart')) {
-        router.push('/checkout')
-      } else {
-        router.push('/member')
+      const cookie = Cookies.get('cart')
+
+      if (cookie && sessionStorage.getItem('cart')) {
+        const cart: Cart[] = JSON.parse(cookie)
+
+        if (cart.length) return router.push('/checkout')
       }
+
+      return router.push('/member')
     } catch (error: any) {
       const { messages } = error.response.data
       if (!messages.error) return setErrors(messages)
