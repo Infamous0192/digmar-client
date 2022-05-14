@@ -29,3 +29,16 @@ export function formatTime(str: string, option: FormatTimeOption) {
 
   return time.join(' ').trim()
 }
+
+/**
+ * Used to format time
+ * @param time time to format
+ * @returns formated time
+ */
+export function formatTimestamp(time: string) {
+  return time
+    .split(':')
+    .map((val, i) => (i == 2 ? val : parseInt(val)))
+    .filter((val, i) => (i == 0 && val == 0 ? false : true))
+    .join(':')
+}

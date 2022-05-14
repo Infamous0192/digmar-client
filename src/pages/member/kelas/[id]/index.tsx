@@ -1,33 +1,32 @@
 import type { NextPage } from 'next'
-import { DashboardLayout } from 'layouts/dashboard'
-import { BookmarkIcon, CheckCircleIcon, CheckIcon, PlayIcon } from '@heroicons/react/solid'
-import { Button } from 'components/elements'
-import { Link } from 'components/elements'
 import Image from 'next/image'
 
-const curriculums = [
+import { DashboardLayout } from 'layouts/dashboard'
+import { Course, CourseList } from 'container/CourseList'
+
+const curriculums: Course[] = [
   {
     id: '1',
     title: 'Introduction',
-    durasi: '3:14',
+    duration: '00:03:14',
     status: 'finish',
   },
   {
     id: '2',
     title: 'Basic Fundamental',
-    durasi: '4:09',
+    duration: '00:04:09',
     status: 'finish',
   },
   {
     id: '3',
     title: 'Environment Setup',
-    durasi: '5:12',
-    status: 'ongoing',
+    duration: '00:05:12',
+    status: 'process',
   },
   {
     id: '3',
     title: 'Studi Case & Implementation',
-    durasi: '15:15',
+    duration: '00:15:15',
     status: 'process',
   },
 ]
@@ -40,32 +39,16 @@ const MemberCourseDetail: NextPage = () => {
       </div>
       <section>
         <h2 className="font-semibold text-xl mb-4">Materi</h2>
-        {curriculums.map((i) => (
-          <Link key={i.id} to="/member/kelas/KL-123/1">
-            <div
-              className={`w-full ${
-                i.status === 'ongoing' ? 'bg-sunglow-100' : 'bg-white hover:bg-slate-50'
-              } border border-slate-200 rounded flex items-center mb-1 p-3`}
-            >
-              {i.status === 'finish' && <CheckCircleIcon className="h-8 w-8 text-green-500" />}
-              {i.status === 'ongoing' && <BookmarkIcon className="h-8 w-8 text-orange-500" />}
-              {i.status === 'process' && (
-                <div className="h-8 w-8 bg-slate-200 rounded-full flex-shrink-0" />
-              )}
-              <div className="flex items-center flex-grow ml-2">
-                <h2 className="text-lgs font-medium leading-none">{i.title}</h2>
-                <span className="ml-1 text-sm leading-none text-slate-600">({i.durasi})</span>
-              </div>
-              <Button color="primary" size="xs">
-                Mulai
-              </Button>
-            </div>
-          </Link>
-        ))}
+        <CourseList code="KL02" courses={curriculums} />
       </section>
 
       <div className="max-w-xl mx-auto w-full mt-8 relative">
-        <Image alt="Sertifikat Dicoding" src="/sertifikat_dicoding.png" width={2339} height={1654} />
+        <Image
+          alt="Sertifikat Dicoding"
+          src="/sertifikat_dicoding.png"
+          width={2339}
+          height={1654}
+        />
         <div className="bg-black w-full h-full inset-0 z-10 absolute bg-opacity-0 hover:bg-opacity-40 transition-all duration-300 cursor-pointer"></div>
       </div>
     </DashboardLayout>
