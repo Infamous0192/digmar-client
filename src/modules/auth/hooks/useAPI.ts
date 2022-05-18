@@ -1,11 +1,9 @@
 import { useEffect } from 'react'
 import axios from 'lib/axios'
 import { useAuth } from './useAuth'
-import { useRefreshToken } from './useRefreshToken'
 
 export function useAPI() {
   const { state, dispatch } = useAuth()
-  const refresh = useRefreshToken()
 
   useEffect(() => {
     const requestIntercept = axios.interceptors.request.use(
@@ -38,7 +36,7 @@ export function useAPI() {
       axios.interceptors.request.eject(requestIntercept)
       axios.interceptors.response.eject(responseIntercept)
     }
-  }, [state, refresh])
+  }, [state])
 
   return axios
 }

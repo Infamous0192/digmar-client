@@ -34,16 +34,16 @@ const CourseDetail: NextPage<Props> = ({ kelas, materi }) => {
   const { state } = useAuth()
 
   function registerCourse() {
-    if (!state.isAuthenticated) {
-      const cart = JSON.stringify([
-        {
-          kode: kelas!.kode_kelas,
-          jenis: 'kelas',
-        },
-      ])
+    const cart = JSON.stringify([
+      {
+        kode: kelas!.kode_kelas,
+        jenis: 'kelas',
+      },
+    ])
 
-      sessionStorage.setItem('cart', cart)
-      Cookies.set('cart', cart)
+    sessionStorage.setItem('cart', cart)
+    Cookies.set('cart', cart)
+    if (!state.isAuthenticated) {
       router.push('/masuk')
     } else {
       router.push('/checkout')

@@ -6,7 +6,7 @@ import { Cart } from 'types'
 import { LandingLayout } from 'layouts/landing'
 import { Button, Link } from 'components/elements'
 import { TextField } from 'components/forms'
-import { Creds, useAuth } from 'modules/auth'
+import { Creds, useAPI, useAuth } from 'modules/auth'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useForm } from 'hooks'
@@ -27,6 +27,7 @@ interface Props {
 const CheckoutPage: NextPage<Props> = ({ products }) => {
   const router = useRouter()
   const { state } = useAuth()
+  const api = useAPI()
 
   useEffect(() => {
     if (!state.isAuthenticated && state.isLoaded && router.isReady) router.push('/masuk')
@@ -40,7 +41,7 @@ const CheckoutPage: NextPage<Props> = ({ products }) => {
     e.preventDefault()
 
     try {
-      const res = await axios.post('/members/order', {
+      const res = await api.post('/members/order', {
         iduser: state.creds!.id_user,
         kodeproduk: product.kode_kelas,
         namaterdaftar: state.creds!.username,
@@ -49,7 +50,7 @@ const CheckoutPage: NextPage<Props> = ({ products }) => {
 
       console.log(res.data)
     } catch (error: any) {
-      console.log(error.response)
+      console.log(error)
     }
   }
 
@@ -134,6 +135,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req }) => 
     if (!carts.length) throw new Error()
 
     const course = await axios.get(`/classes/detail/${carts[0].kode}`)
+
+    console.log(carts[0].kode)
+    console.log(course.data.kelas)
 
     return {
       props: {
