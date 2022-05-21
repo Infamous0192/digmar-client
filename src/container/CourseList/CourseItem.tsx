@@ -16,7 +16,7 @@ interface Props {
 
 const CourseItem: React.FC<Props> = ({ code, course }) => {
   return (
-    <Link to={`/member/kelas${code}/${course.id}`}>
+    <Link to={`/member/kelas/${code}/${course.id}`}>
       <div
         className={`w-full ${
           course.status === 'ongoing' ? 'bg-sunglow-100' : 'bg-white hover:bg-slate-50'

@@ -136,9 +136,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ({ req }) => 
 
     const course = await axios.get(`/classes/detail/${carts[0].kode}`)
 
-    console.log(carts[0].kode)
-    console.log(course.data.kelas)
-
     return {
       props: {
         products: [course.data.kelas],

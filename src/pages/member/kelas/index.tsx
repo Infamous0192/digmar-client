@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { DashboardLayout } from 'layouts/dashboard'
 import { Button, Card, Link } from 'components/elements'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'lib/axios'
 
 const courses = [
   {
@@ -30,6 +31,14 @@ interface State {
 
 const MemberCourse: NextPage = () => {
   const [state, setState] = useState<State>({ status: 'ongoing' })
+  useEffect(() => {
+    axios
+      .post('/members/kelasaktif', { iduser: '8' }, { headers: {
+        Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3QiOjE2NTI1OTUwNTMsImlkX3VzZXIiOiI4IiwidXNlcm5hbWUiOiJEd2EgTWVpemFkZXdhIiwiZW1haWwiOiJpbmZhbW91czAxOTJAZ21haWwuY29tIn0.CMqipWlhCVTM3i5A4XBt9_A8-fUExCNDzS0hg1IyEiM`
+      } })
+      .then((res) => console.log(res.data))
+      .catch((error) => console.log(error.response.data))
+  }, [state])
 
   function handleStatus(status: string) {
     return () => {
@@ -65,7 +74,10 @@ const MemberCourse: NextPage = () => {
           {courses
             .filter(({ status }) => status == state.status)
             .map((course) => (
-              <div key={course.id} className="w-full hover:bg-slate-50 transition-colors md:flex items-center justify-between p-4">
+              <div
+                key={course.id}
+                className="w-full hover:bg-slate-50 transition-colors md:flex items-center justify-between p-4"
+              >
                 <Link to="/member/kelas/KL-123">
                   <div className="flex items-center h-full w-full">
                     <div className="w-16 h-16 bg-slate-200 flex-shrink-0 rounded-md"></div>

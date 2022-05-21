@@ -41,12 +41,12 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
   }
 
   useEffect(() => {
-    if (state.isLoaded && !state.isAuthenticated) {
+    if (!state.isAuthenticated) {
       router.push('/masuk')
     }
   }, [state])
 
-  if (!state.isLoaded || !state.isAuthenticated) return null
+  if (!state.isAuthenticated) return null
 
   return (
     <SidebarContext.Provider value={{ open, toggleOpen, setOpen }}>
