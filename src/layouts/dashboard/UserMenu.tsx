@@ -1,11 +1,12 @@
+import { useRouter } from 'next/router'
 import { useAuth } from 'modules/auth'
 import { Menu, Transition } from '@headlessui/react'
-import { Link } from 'components/elements'
 import { LogoutIcon } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
 
 const UserMenu: React.FC = () => {
   const { state, dispatch } = useAuth()
+  const router = useRouter()
 
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' })
@@ -14,13 +15,6 @@ const UserMenu: React.FC = () => {
   return (
     <Menu as="div" className="relative inline-flex">
       <Menu.Button className="inline-flex justify-center items-center group" aria-haspopup="true">
-        {/* <img
-          className="w-8 h-8 rounded-full"
-          src="https://via.placeholder.com/150"
-          width="32"
-          height="32"
-          alt="User"
-        /> */}
         <div className="w-8 h-8 rounded-full bg-slate-200"></div>
         <div className="flex items-center truncate">
           <span className="hidden sm:block truncate ml-2 text-sm font-medium group-hover:text-slate-800">
@@ -41,15 +35,15 @@ const UserMenu: React.FC = () => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <Menu.Items>
+        <Menu.Items as="div">
           <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
             <div className="font-medium text-slate-800">{state.creds?.username}</div>
             <div className="text-xs text-slate-500 italic capitalize">Customer</div>
           </div>
           <Menu.Item
-            as={Link}
-            to="/"
+            as="button"
             className="font-medium hover:bg-slate-50 w-full text-sm text-slate-600 hover:text-slate-800 flex items-center py-1 px-3"
+            onClick={() => router.push('/member')}
           >
             <HomeIcon className="w-5 h-5 inline" />
             <span className="leading-none ml-2">Beranda</span>
