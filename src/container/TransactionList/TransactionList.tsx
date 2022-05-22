@@ -11,7 +11,7 @@ import TransactionStatus from './TransactionStatus'
 import dayjs from 'lib/dayjs'
 
 interface State {
-  status: 'all' | 'pending' | 'bayar' | 'cancel'
+  status: 'all' | 'pending' | 'terbayar' | 'cancel'
   category: 'all' | 'kelas' | 'event'
 }
 
@@ -85,12 +85,13 @@ const TransactionList: React.FC = () => {
             {data.filter(({ statuspembayaran }) => statuspembayaran === 'pending').length})
           </Button>
           <Button
-            color={state.status == 'bayar' ? 'primary' : 'light'}
+            color={state.status == 'terbayar' ? 'primary' : 'light'}
             size="sm"
             rounded="full"
-            onClick={handleStatus('bayar')}
+            onClick={handleStatus('terbayar')}
           >
-            Terbayar ({data.filter(({ statuspembayaran }) => statuspembayaran === 'bayar').length})
+            Terbayar (
+            {data.filter(({ statuspembayaran }) => statuspembayaran === 'terbayar').length})
           </Button>
           <Button
             color={state.status == 'cancel' ? 'primary' : 'light'}

@@ -98,7 +98,7 @@ const TransactionDetail: NextPage<Props> = ({ transaction, product }) => {
                   {transaction.status_bayar == 'pending' && (
                     <div className="w-1/3 h-full bg-sunglow-500"></div>
                   )}
-                  {transaction.status_bayar == 'bayar' && (
+                  {transaction.status_bayar == 'terbayar' && (
                     <div className="w-full h-full bg-sunglow-500"></div>
                   )}
                   {transaction.status_bayar == 'cancel' && (
@@ -109,7 +109,7 @@ const TransactionDetail: NextPage<Props> = ({ transaction, product }) => {
                   className={`flex items-center justify-between font-medium ${
                     transaction.status_bayar == 'pending'
                       ? 'text-slate-600'
-                      : transaction.status_bayar == 'bayar'
+                      : transaction.status_bayar == 'terbayar'
                       ? 'text-sunglow-500'
                       : '!text-red-500'
                   } mt-3`}
@@ -126,13 +126,13 @@ const TransactionDetail: NextPage<Props> = ({ transaction, product }) => {
             </Card.Footer>
           </Card>
 
-          {transaction.status_bayar == 'bayar' && (
+          {transaction.status_bayar == 'terbayar' && (
             <Card className="mb-8">
               <Card.Body>
                 <h2 className="text-lg font-semibold mb-2">Pembayaran Selesai</h2>
                 <p className="mb-4">
                   Terima kasih telah memesan produk kami. Silahkan tekan tombol dibawah untuk
-                  menikmati kelas ini.
+                  menikmati kelas.
                 </p>
                 <Link to={`/member/kelas`}>
                   <Button color="secondary" className="w-full">
@@ -230,7 +230,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, query }) => 
 
     return {
       props: {
-        transaction: { ...transaction.data, status_bayar: 'bayar' },
+        transaction: { ...transaction.data },
         product: product.data.kelas,
       },
     }
