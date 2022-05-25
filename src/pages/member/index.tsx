@@ -5,7 +5,7 @@ const Dashboard: NextPage = () => {
   return (
     <DashboardLayout>
       <h1 className="text-2xl font-bold text-slate-800 leading-none mb-8">Progress Kelas</h1>
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-6">
+      {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-6">
         <div className="bg-white rounded-lg shadow flex">
           <div className="rounded-lg rounded-r-none h-full aspect-square bg-slate-200 flex-shrink-0"></div>
           <div className="p-4 flex-grow">
@@ -57,7 +57,7 @@ const Dashboard: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </DashboardLayout>
   )
 }

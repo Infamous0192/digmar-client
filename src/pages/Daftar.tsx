@@ -13,10 +13,12 @@ const RegisterPage: React.FC = () => {
   const handleSubmit = useSubmit(async () => {
     try {
       const { data } = await axios.post('/register', values)
+      console.log(data)
       router.push('/masuk')
     } catch (error: any) {
-      const { messages } = error.response.data
-      return setErrors(messages)
+      const messages = error.response.data
+      console.log(messages)
+      // return setErrors(messages)
     }
   })
 
@@ -61,7 +63,7 @@ const RegisterPage: React.FC = () => {
               onChange={handleChange}
             />
           </div>
-          {/* <div>
+          <div>
             <TextField
               name="nohp"
               type="text"
@@ -69,7 +71,7 @@ const RegisterPage: React.FC = () => {
               error={errors['nohp']}
               onChange={handleChange}
             />
-          </div> */}
+          </div>
           <div className="flex items-center justify-between py-3">
             <Button className="text-sm">Daftar</Button>
           </div>

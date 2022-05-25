@@ -12,23 +12,22 @@ const ClassCourse: NextPage<ICourseContext> = ({ materi, kelas }) => {
 
   function handlePrev() {
     const prevCourse = kelas.materi[urutan - 2]
-    router.push(`/member/kelas/${kelas.idkelasterdaftar}/${prevCourse.idrecordmateri}`)
+    router.replace(`/member/kelas/${kelas.idkelasterdaftar}/${prevCourse.idrecordmateri}`)
   }
 
   function handleNext() {
     const nextCourse = kelas.materi[urutan]
-    router.push(`/member/kelas/${kelas.idkelasterdaftar}/${nextCourse.idrecordmateri}`)
+    router.replace(`/member/kelas/${kelas.idkelasterdaftar}/${nextCourse.idrecordmateri}`)
   }
+
+  console.log(materi.video_materi)
 
   return (
     <CourseContext.Provider value={{ materi, kelas }}>
       <CourseLayout>
         <h1 className="text-2xl font-semibold mb-4 capitalize">{materi.judul_materi}</h1>
         <div className="w-full aspect-video bg-slate-200 rounded-md overflow-hidden mb-4">
-          {/* <video
-            className="w-full h-full"
-            src={props.materi.videomateri}
-          ></video> */}
+          <iframe className="w-full h-full" src={materi.video_materi}></iframe>
         </div>
         <div className="flex items-center justify-between">
           <div>
