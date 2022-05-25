@@ -29,10 +29,10 @@ const RegisterPage: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-3.5 mt-2">
           <div>
             <TextField
-              name="nama_user"
+              name="username"
               type="text"
               label="Nama"
-              error={errors['nama_user']}
+              error={errors['username']}
               onChange={handleChange}
             />
           </div>
