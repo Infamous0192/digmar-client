@@ -85,7 +85,7 @@ const LoginPage: NextPage = () => {
         <div className="border-t border-slate-200 mt-4">
           <div className="py-4 text-slate-700 text-sm">
             Belum punya akun?{' '}
-            <Link to="/daftar" className="text-sunglow-600 hover:text-sunglow-500">
+            <Link to="/Daftar" className="text-sunglow-600 hover:text-sunglow-500">
               Daftar
             </Link>
           </div>

@@ -14,24 +14,6 @@ const RegisterPage: React.FC = () => {
     try {
       const { data } = await axios.post('/register', values)
       router.push('/masuk')
-      // navigate('/masuk', {
-      //   state: {
-      //     message: 'Anda berhasil terdaftar, silahkan login',
-      //   },
-      // })
-      // const res = await axios.get('/me', {
-      //   headers: {
-      //     Authorization: `bearer ${token}`,
-      //   },
-      // })
-
-      // dispatch({
-      //   type: 'LOGIN',
-      //   payload: {
-      //     creds: { ...res.data, email: 'infamous0192@gmail.com' },
-      //     token,
-      //   },
-      // })
     } catch (error: any) {
       const { messages } = error.response.data
       return setErrors(messages)
@@ -89,9 +71,7 @@ const RegisterPage: React.FC = () => {
             />
           </div> */}
           <div className="flex items-center justify-between py-3">
-            <Button className="text-sm">
-              Daftar
-            </Button>
+            <Button className="text-sm">Daftar</Button>
           </div>
         </form>
         <div className="border-t border-slate-200 mt-4">

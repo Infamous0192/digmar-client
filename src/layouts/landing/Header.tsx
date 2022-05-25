@@ -177,7 +177,7 @@ const Header: React.FC = () => {
             >
               Masuk
             </Link>
-            <Link to="/daftar">
+            <Link to="/Daftar">
               <Button color="secondary" size="sm" className="ml-8">
                 Daftar
               </Button>
